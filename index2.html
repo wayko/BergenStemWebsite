@@ -34,43 +34,27 @@
 <div class="wrapper">
 
 <header class="logo1">
-<div class="row">
-<div class="col-xs-12 col-md-12"><a href="#"><img src="images/stemlogo.png" class="footimg"/></a></div>
+<div class="row trans">
+<div class="col-xs-12 col-md-12"><a href="#"><img src="images/stemlogo3.png" class="footimg"/></a></div>
 </div>
 </header>
 
-<header>
-<div class="row leftright">
-<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="http://bergen.edu"><img src="images/bcc.gif" class="footimg"/></a></div>
-<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="http://www.bergenstem.org/home.php?p=b2b"><img src="images/b2b.png" class="footimg"/></a></div>
-<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="http://www.bergen.edu/faculty-staff/grants-administration/awards/stem-gps/the-stem-gps-team"><img src="images/stemgps.png" class="footimg3"/></a></div>
-<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="https://www.facebook.com/bergen.stem"><img src="images/stemfb.gif" class="footimg4"/></a></div>
-</div>
-</header>
-
-<header class="topHead1">
-<h1>STEM Student Union @ Bergen Community College
-<small> 
-<span class="glyphicon glyphicon-education glyphblack"></span>
-</small>
-</h1>
-</header>
-
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default colorpick fullwidth">
 <div class="container-fluid">
+<div class="row">
 <div class="navbar-header">
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-<ul class="nav navbar-nav">
+<ul class="nav navbar-nav ">
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-<ul class="">
+<ul >
 </ul>
 </li>
 </ul>
-<ul class="nav navbar-nav">
+<ul class="nav navbar-nav ">
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About</a>
-<ul class="">
+<ul >
 </ul>
 </li>
 </ul>
@@ -226,31 +210,21 @@ mainClass: 'my-mfp-zoom-in'
 <li class="lihead">Learn</li>
 <li>Various technical skills for free, such as using the plasma torch, programming languages, operating 3d printers, and more.</li>
 </ul>
-
-
 </div>
 <div class="col-md-6">
-
 </div>
 </div>
 </ul>
 </li>
 </ul>
-<ul class="nav navbar-nav">
+<ul class="nav navbar-nav colorpick1">
 <li class="dropdown">
 <a href="b2b.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">B2B</a>
-<ul class="">
+<ul >
 </ul>
 </li>
 </ul>
-<ul class="nav navbar-nav">
-<li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FAQ</a>
-<ul class="">
-</ul>
-</li>
-</ul>
-<ul class="nav navbar-nav">
+<ul class="nav navbar-nav colorpick1">
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Register</a>
 <ul class="dropdown-menu dropreg">
@@ -285,23 +259,36 @@ mainClass: 'my-mfp-zoom-in'
 </ul>
 </li>
 </ul>
-</div><!-- /.navbar-collapse -->
+<ul class="nav navbar-nav colorpick1">
+<li class="dropdown wide">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FAQ</a>
+<ul >
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
 </div>
 </div>
 </nav>
+
+<section class="imgsec">
+IMAGE SECTION
+</section>
 
 <section ng-controller="StemController as stemCtrl">
 <div class="container-fluid margleft15">
 <div class="row">
 <div ng-repeat="stemProject in stemCtrl.project">
-<div class="col-xs-12 col-md-4 col-lg-4">
+<div class="col-xs-12 col-md-12 col-lg-3 w320">
 <h3 class="projecthead">{{stemProject.projectName}}</h3>
 </div>
 </div>
 </div>
 <div class="row">
 <div ng-repeat="stemProject in stemCtrl.project">
-<div class="col-xs-12 col-md-4 col-lg-4">
+<div class="col-xs-12 col-md-12 col-lg-3 w320">
 <img src='{{stemProject.images[0]}}' style="width:320px;height:250px;"/>
 </div>
 </div>
@@ -309,14 +296,14 @@ mainClass: 'my-mfp-zoom-in'
 
 <div class="row">
 <div ng-repeat="stemProject2 in stemCtrl.project2">
-<div class="col-xs-12 col-md-4 col-lg-4">
+<div class="col-xs-12 col-md-12 col-lg-3 w320">
 <h3 class="projecthead">{{stemProject2.projectName}}</h3>
 </div>
 </div>
 </div>
 <div class="row">
 <div ng-repeat="stemProject2 in stemCtrl.project2">
-<div class="col-xs-12 col-md-4 col-lg-4">
+<div class="col-xs-12 col-md-12 col-lg-3 w320">
 <img src='{{stemProject2.images[0]}}' style="width:320px;height:250px;" alt="Coming Soon"/>
 </div>
 </div>
@@ -324,14 +311,14 @@ mainClass: 'my-mfp-zoom-in'
 
 <div class="row">
 <div ng-repeat="stemProject3 in stemCtrl.project3">
-<div class="col-xs-12 col-md-4 col-lg-4">
+<div class="col-xs-12 col-md-12 col-lg-3 w320">
 <h3 class="projecthead">{{stemProject3.projectName}}</h3>
 </div>
 </div>
 </div>
 <div class="row">
 <div ng-repeat="stemProject3 in stemCtrl.project3">
-<div class="col-xs-12 col-md-4 col-lg-4">
+<div class="col-xs-12 col-md-12 col-lg-3 w320">
 <img src='{{stemProject3.images[0]}}' style="width:320px;height:250px;" alt="Coming Soon"/>
 </div>
 </div>
@@ -339,14 +326,14 @@ mainClass: 'my-mfp-zoom-in'
 
 <div class="row">
 <div ng-repeat="stemProject4 in stemCtrl.project4">
-<div class="col-xs-12 col-md-4 col-lg-4">
+<div class="col-xs-12 col-md-12 col-lg-3 w320">
 <h3 class="projecthead">{{stemProject4.projectName}}</h3>
 </div>
 </div>
 </div>
 <div class="row">
 <div ng-repeat="stemProject4 in stemCtrl.project4">
-<div class="col-xs-12 col-md-4 col-lg-4">
+<div class="col-xs-12 col-md-12 col-lg-3 w320">
 <img src='{{stemProject4.images[0]}}' style="width:320px;height:250px;" alt="Coming Soon"/>
 </div>
 </div>
@@ -358,7 +345,14 @@ mainClass: 'my-mfp-zoom-in'
 <footer>
 All content is © BCC STEM Student Union 2017
 </footer>
-
+<footer>
+<div class="row leftright">
+<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="http://bergen.edu"><img src="images/bcc.gif" class="footimg"/></a></div>
+<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="http://www.bergenstem.org/home.php?p=b2b"><img src="images/b2b.png" class="footimg"/></a></div>
+<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="http://www.bergen.edu/faculty-staff/grants-administration/awards/stem-gps/the-stem-gps-team"><img src="images/stemgps.png" class="footimg3"/></a></div>
+<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="https://www.facebook.com/bergen.stem"><img src="images/stemfb.gif" class="footimg4"/></a></div>
+</div>
+</footer>
 <footer class="logo2">
 <div class="row">
 <div class="col-xs-12 col-md-12"><a href="#">
