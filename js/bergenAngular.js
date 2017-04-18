@@ -1,7 +1,10 @@
 (function(){
 var app = angular.module('bergenstem', ['ngRoute']).
 	config(function($routeProvider, $locationProvider){
-		
+		$locationProvider.html5Mode({
+  enabled: false,
+  requireBase: false
+});
 		$routeProvider.
 			when("/",{templateUrl:"partials/list.html"})
 	})
