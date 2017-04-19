@@ -1,6 +1,6 @@
 (function(){
 var app = angular.module('bergenstem', ['ngRoute']).
-	config(function($routeProvider, $locationProvider){
+	config(['$routeProvider', '$locationProvider',function($routeProvider, $locationProvider){
 		$locationProvider.html5Mode(true);
 		$routeProvider.
 			when("/",{templateUrl:"partials/list.html"}).
@@ -11,7 +11,9 @@ var app = angular.module('bergenstem', ['ngRoute']).
 			when("/project5",{templateUrl:"partials/test5.html"}).
 			otherwise({redirectTo:"/"});
 			
-	})
+
+			
+	}])
 
 app.controller('StemController', function() {
 	this.project = projects;
