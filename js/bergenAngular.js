@@ -10,7 +10,7 @@ var app = angular.module('bergenstem', ['ngRoute']).
 		$routeProvider.
 			when("/project",{templateUrl:"partials/list.html"})
 	})
-	})
+
 app.controller('StemController', function() {
 	this.project = projects;
 	this.project2 = projects2;
