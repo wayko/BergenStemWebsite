@@ -1,0 +1,34 @@
+<section ng-controller="StemController as stemCtrl">
+<div class="containall row margleft15">
+<ul ng-repeat="stemProject2 in stemCtrl.project2" class="col-xs-12 col-md-12 col-lg-3 w320">
+<li class="projecthead">{{stemProject2.projectName}}</li>
+<li><img src='{{stemProject2.images[0]}}' style="width:320px;height:250px;" onerror="this.onerror=null;this.src='images/default.jpg';"/></li>
+<h3>Description</h3>
+<li><p>{{stemProject2.projectDesc[0].para1}}</p></li>
+<li><p>{{stemProject2.projectDesc[0].para2}}</p></li>
+<li><p>{{stemProject2.projectDesc[0].para3}}</p></li>
+<h3>Team Leader</h3>
+<li><p>{{stemProject2.projectLeader}}</p></li>
+<h3>Faculty</h3>
+<li><p>{{stemProject2.projectFac}}</p></li>
+<h3>Team Members</h3>
+{{stemProject2.projectMembers[0].member1}},
+{{stemProject2.projectMembers[0].member2}},
+{{stemProject2.projectMembers[0].member3}},
+{{stemProject2.projectMembers[0].member4}},
+{{stemProject2.projectMembers[0].member5}},
+{{stemProject2.projectMembers[0].member6}},
+{{stemProject2.projectMembers[0].member7}},
+{{stemProject2.projectMembers[0].member8}},
+{{stemProject2.projectMembers[0].member9}},
+{{stemProject2.projectMembers[0].member10}}
+<h3>Meetings</h3>
+<li><p>{{stemProject2.projectMeeting}}</p></li>
+<h3>Project Blog</h3>
+<li><p>{{stemProject2.projectBlog}}</p></li>
+
+
+
+</ul>
+</div>
+</section>

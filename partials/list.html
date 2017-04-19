@@ -33,3 +33,12 @@
 </ul>
 </div>
 </section>
+
+<section ng-controller="StemController as stemCtrl">
+<div class="containall row margleft15">
+<ul ng-repeat="stemProject5 in stemCtrl.project5" class="col-xs-12 col-md-12 col-lg-3 w320">
+<li class="projecthead">{{stemProject5.projectName}}</li>
+<li><img src='{{stemProject5.images[0]}}' style="width:320px;height:250px;" onerror="this.onerror=null;this.src='images/default.jpg';"/></li>
+</ul>
+</div>
+</section>
