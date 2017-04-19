@@ -1,5 +1,13 @@
 (function(){
-var app = angular.module('bergenstem', []);
+var app = angular.module('bergenstem', ['ngRoute']).
+	config(function($routeProvider, $locationProvider){
+		$locationProvider.html5Mode({
+  enabled: false,
+  requireBase: false
+});
+		$routeProvider.
+			when("/",{templateUrl:"partials/list.html"})
+	})
 app.controller('StemController', function() {
 	this.project = projects;
 	this.project2 = projects2;
