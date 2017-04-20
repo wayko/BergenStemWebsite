@@ -42,3 +42,21 @@
 </ul>
 </div>
 </section>
+
+<section ng-controller="StemController as stemCtrl">
+<div class="containall row margleft15">
+<ul ng-repeat="stemProject6 in stemCtrl.project6" class="col-xs-12 col-md-12 col-lg-3 w320">
+<li class="projecthead">{{stemProject6.projectName}}</li>
+<li><img src='{{stemProject6.images[0]}}' style="width:320px;height:250px;" onerror="this.onerror=null;this.src='images/default.jpg';"/></li>
+</ul>
+</div>
+</section>
+
+<section ng-controller="StemController as stemCtrl">
+<div class="containall row margleft15">
+<ul ng-repeat="stemProject7 in stemCtrl.project7" class="col-xs-12 col-md-12 col-lg-3 w320">
+<li class="projecthead">{{stemProject7.projectName}}</li>
+<li><img src='{{stemProject7.images[0]}}' style="width:320px;height:250px;" onerror="this.onerror=null;this.src='images/default.jpg';"/></li>
+</ul>
+</div>
+</section>

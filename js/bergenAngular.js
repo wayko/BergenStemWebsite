@@ -9,6 +9,8 @@ var app = angular.module('bergenstem', ['ngRoute']).
 			when("/project3",{templateUrl:"partials/test3.html"}).
 			when("/project4",{templateUrl:"partials/test4.html"}).
 			when("/project5",{templateUrl:"partials/test5.html"}).
+			when("/project6",{templateUrl:"partials/test6.html"}).
+			when("/project7",{templateUrl:"partials/test7.html"}).
 			otherwise({redirectTo:"/"});
 			
 
@@ -21,7 +23,10 @@ app.controller('StemController', function() {
 	this.project3 = projects3;
 	this.project4 = projects4;
 	this.project5 = projects5;
+	this.project6 = projects6;
+	this.project7 = projects7;
 	});
+	
 	var projects = [
 	{
 		projectName: 'Algae Biodiesel',
@@ -95,7 +100,10 @@ app.controller('StemController', function() {
 		}],                           
 		projectMeeting:'Contact Farah Rezae',
 		projectBlog: 'http://computationalchemistrybcc.blogspot.com/'
-	},
+	}
+	];
+	
+	var projects2 = [
 	{
 		projectName: 'Computer Vision',
 		projectDesc:[
@@ -143,10 +151,7 @@ app.controller('StemController', function() {
 		}],                           
 		projectMeeting:'TBA',
 		projectBlog: ''
-	}
-	];
-	
-	var projects2 = [
+	},
 	{
 		projectName: 'EEG Brain Project',
 		projectDesc:[
@@ -178,7 +183,10 @@ app.controller('StemController', function() {
 		}],                           
 		projectMeeting:'Wednesday from 9am - 11am, and Friday 12:30pm - 3pm in S-315',
 		projectBlog: 'http://eegstem.blogspot.com/'
-	},
+	}
+	];
+	
+	var projects3 = [
 	{
 		projectName: 'Electric Vehicle Conversions',
 		projectDesc:[
@@ -249,7 +257,11 @@ app.controller('StemController', function() {
 		}],                           
 		projectMeeting:'Monday from 2:00 pm - 4:00 pm and Thursday from 3:00 pm - 4:00pm ',
 		projectBlog: 'http://bergenballoon.blogspot.com/'
-	},
+	}
+	
+	];
+	
+	var projects4 = [
 	{
 		projectName: 'Hydroponics',
 		projectDesc:[
@@ -273,10 +285,7 @@ app.controller('StemController', function() {
 		}],                           
 		projectMeeting:'Contact Dawn Steele',
 		projectBlog: 'http://hydroponicsstem.blogspot.com/'
-	}
-	];
-	
-	var projects3 = [
+	},
 	{
 		projectName: 'Organic Chemistry',
 		projectDesc:[
@@ -324,7 +333,10 @@ app.controller('StemController', function() {
 		}],                           
 		projectMeeting:'',
 		projectBlog: ''
-	},
+	}
+	];
+	
+	var projects5= [
 	{
 		projectName: 'Radio Jove and Meteor Studies',
 		projectDesc:[
@@ -366,7 +378,7 @@ app.controller('StemController', function() {
 		],
 		images:[
 		
-		 'images/robitics1.jpg',
+		 'images/robotics1.jpg',
 		
 			
 		],
@@ -408,7 +420,7 @@ app.controller('StemController', function() {
 	}
 	];
 	
-	var projects4 = [
+	var projects6 = [
 	{
 		projectName: 'Seismometer',
 		projectDesc:[
@@ -485,7 +497,10 @@ app.controller('StemController', function() {
 		}],                           
 		projectMeeting:'Wednesday and Friday, 10:30AM-1:30PM',
 		projectBlog: 'http://bccstemuav.blogspot.com/'
-	},
+	}
+	];
+	
+	var projects7 = [
 	{
 		projectName: 'UV-4 UAV',
 		projectDesc:[
@@ -535,9 +550,6 @@ app.controller('StemController', function() {
 		projectMeeting:'',
 		projectBlog: 'http://bccwaterchem.blogspot.com/'
 	},
-	];
-	
-	var projects5= [
 	{
 		projectName: 'V.E.G.E.T.A. (Wind Turbine)',
 		projectDesc:[
@@ -563,5 +575,4 @@ app.controller('StemController', function() {
 		projectBlog: 'http://vegeta-stem.blogspot.com/'
 	}
 	];
-	
 })();
