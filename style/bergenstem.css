@@ -22,59 +22,7 @@
 	{
 		font-family: 'Open Sans', sans-serif;
 		line-height: 1.85em;
-		color: #888;
-		font-weight: 300;
-		
-		
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f3f3f3+50,ededed+51,ffffff+100;White+Gloss+%232 */
-background: rgb(255,255,255); /* Old browsers */
-background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(243,243,243,1) 50%, rgba(237,237,237,1) 51%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
-
-
-
-	}
-
-	a
-	{
-		color: #3B95C6;
-		text-decoration: underline;
-		-moz-transition: color .2s ease-in-out;
-		-webkit-transition: color .2s ease-in-out;
-		-o-transition: color .2s ease-in-out;
-		-ms-transition: color .2s ease-in-out;
-		transition: color .2s ease-in-out;
-	}
-	@charset 'UTF-8';
-
-
-
-/*
-	Miniport 2.5 by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
-/*********************************************************************************/
-/* Basic                                                                         */
-/*********************************************************************************/
-
-	*
-	{
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		-o-box-sizing: border-box;
-		-ms-box-sizing: border-box;
-		box-sizing: border-box;
-	}
-
-	body, input, textarea
-	{
-		font-family: 'Open Sans', sans-serif;
-		line-height: 1.85em;
-		color: #888;
+		color: #000;
 		font-weight: 300;
 	}
 
@@ -1023,26 +971,22 @@ margin-left:0;
 	display:inline;
 }
 .projecthead{
-	background: #00254c; /* Old browsers */
-
+background: #00254c; /* Old browsers */
 color:#fff;
-width:320px;
+width:420px;
 height:45px;
-  margin-bottom: 6px;
-    padding: 10px;
+margin-bottom: 6px;
+padding: 10px;
 text-align:center;
 font-size:1.5em;
 font-weight: 700 !important;
-    letter-spacing: 0.05em !important;
+letter-spacing: 0.05em !important;
 }
 .col-lg-4 {
     width: 320px;
 }
 
-.w320{
-	width:320px;
-	margin-right:10px;
-}
+
 
 .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9
 {
@@ -1051,6 +995,11 @@ font-weight: 700 !important;
 	 margin-right: 10px;
 	 margin-bottom:20px;
 }
+.w320{
+	width:420px;
+	margin-right:50px;
+}
+
 .margleft15{
 	margin-left: 15px;
 }
@@ -1117,7 +1066,8 @@ font-weight: 700 !important;
 	max-width:1170px;
 }
 .whitebar{
-	height: 65px;
+	margin-top:15px;
+	height: 35px;
 	background-color:#fff;
 	
 }
@@ -1129,7 +1079,7 @@ font-weight: 700 !important;
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#200696', endColorstr='#200696',GradientType=0 ); /* IE6-9 */
 }
 .projCenter{
-	margin-left:15%;
+	margin-left:9.5%
 }
 .footer2{
 	background-color:#545454;
@@ -1153,7 +1103,7 @@ ul.menu
     text-align: left;
 }
 #gt-default-visitor-links {
-    width: 44.44%;
+    width: 300px;
 }
 .leftwidth
 {
@@ -1205,3 +1155,10 @@ ul.menu
     background-image: none;
     
 }
+
+ #map {
+	 float:right;
+        height: 280px;
+        width: 500px;
+
+      }

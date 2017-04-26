@@ -36,9 +36,8 @@
 <div class="wrapper">
 <header class="whitebar">
 <div class="clearfix pull-right">
-<a href="https://www.facebook.com/bergen.stem"><i class="fa fa-facebook fa-4x iconwhite" aria-hidden="true"></i></a>
-<a href="https://twitter.com/bergencc?lang=en"><i class="fa fa-twitter fa-4x iconwhite" aria-hidden="true"></i></a>
-
+<a href="https://www.facebook.com/bergen.stem"><i class="fa fa-facebook fa-2x iconwhite" aria-hidden="true"></i></a>
+<a href="https://twitter.com/bergencc?lang=en"><i class="fa fa-twitter fa-2x iconwhite" aria-hidden="true"></i></a>
 </div>
 </header>
 <header class="logo1">
@@ -46,6 +45,8 @@
 <div class="col-xs-12 col-md-12"><a href="#"><img src="images/stemlogo3.png" class="footimg"/></a></div>
 </div>
 </header>
+
+
 <nav class="navbar navbar-default colorpick fullwidth">
 <div class="container-fluid navwrap">
 <div class="row">
@@ -350,9 +351,7 @@ All content is © BCC STEM Student Union 2017
      <li class="gt-default-mini-right"><a href="#">Lorem Ipsum</a></li>
   </ul>
 </div>
-<div id="street-address-info">
-<img src="images/map.gif" style="width:345px;height:187px;"/>
-</div>
+<div id="map"></div>
 </div>
 </footer>
 <footer class="logo2">
@@ -363,6 +362,47 @@ All content is © BCC STEM Student Union 2017
 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="http://bergen.edu"><img src="images/bcc.gif" class="footimg"/></a></div>
 </div>
 </footer>
+
+   
+    <script>
+
+      function initMap() {
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 18,
+          center: {lat: 40.95172, lng: -74.088621}
+        });
+		var labels = 'CBTPTBE';
+		  var markers = locations.map(function(location, i) {
+          return new google.maps.Marker({
+            position: location,
+            label: labels[i % labels.length]
+          });
+        });
+
+        // Add a marker clusterer to manage the markers.
+        var markerCluster = new MarkerClusterer(map, markers,
+            {imagePath:'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+			}
+			 var locations = [
+		{lat: 40.951712, lng: -74.088638},
+        {lat: 40.951930, lng: -74.088558},
+        {lat: 40.951628, lng: -74.088122},
+		{lat: 40.951372, lng: -74.089431},
+		{lat: 40.950504, lng: -74.087352},
+		{lat: 40.948328, lng: -74.085378},
+		{lat: 40.947570, lng: -74.083393}
+		
+      ]
+			
+			
+    </script>
+   <script src="js/markerclusterer.js">
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUF0_bh5mgywMKD-CyipbUgpKV5ZKlCvI&callback=initMap"
+    async defer></script>
+
 </div>
 <script type="text/javascript" src="js/bergenstem.js" ></script>
 </body>
