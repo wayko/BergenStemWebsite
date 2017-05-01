@@ -321,7 +321,9 @@ mainClass: 'my-mfp-zoom-in'
 </div>
 </section>
 <section class="projCenter">
-<ng-view ></ng-view>
+
+<ng-view class="wrapng"></ng-view>
+
 </section>
 
 <footer>
@@ -362,7 +364,6 @@ All content is © BCC STEM Student Union 2017
 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="http://bergen.edu"><img src="images/bcc.gif" class="footimg"/></a></div>
 </div>
 </footer>
-
    
     <script>
 
@@ -401,7 +402,8 @@ All content is © BCC STEM Student Union 2017
     </script>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUF0_bh5mgywMKD-CyipbUgpKV5ZKlCvI&callback=initMap"
-    async defer></script>
+    async defer>
+	</script>
 
 </div>
 <script type="text/javascript" src="js/bergenstem.js" ></script>

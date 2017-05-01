@@ -11,6 +11,7 @@ var app = angular.module('bergenstem', ['ngRoute']).
 			when("/project5",{templateUrl:"partials/test5.html"}).
 			when("/project6",{templateUrl:"partials/test6.html"}).
 			when("/project7",{templateUrl:"partials/test7.html"}).
+			when("/projects",{redirectTo:"/partials/test.html"}).
 			otherwise({redirectTo:"/"});
 			
 
