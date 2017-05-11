@@ -4,13 +4,13 @@ var app = angular.module('bergenstem', ['ngRoute']).
 		$locationProvider.html5Mode(true);
 		$routeProvider.
 			when("/",{templateUrl:"partials/list.html"}).
-			when("/project",{templateUrl:"partials/test.html"}).
-			when("/project2",{templateUrl:"partials/test2.html"}).
-			when("/project3",{templateUrl:"partials/test3.html"}).
-			when("/project4",{templateUrl:"partials/test4.html"}).
-			when("/project5",{templateUrl:"partials/test5.html"}).
-			when("/project6",{templateUrl:"partials/test6.html"}).
-			when("/project7",{templateUrl:"partials/test7.html"}).
+			when("/project/:projectName",{templateUrl:"partials/test.html"}).
+			when("/project2/:projectName",{templateUrl:"partials/test2.html"}).
+			when("/project3/:projectName",{templateUrl:"partials/test3.html"}).
+			when("/project4/:projectName",{templateUrl:"partials/test4.html"}).
+			when("/project5/:projectName",{templateUrl:"partials/test5.html"}).
+			when("/project6/:projectName",{templateUrl:"partials/test6.html"}).
+			when("/project7/:projectName",{templateUrl:"partials/test7.html"}).
 			when("/projects",{redirectTo:"/partials/test.html"}).
 			otherwise({redirectTo:"/"});
 			
@@ -18,7 +18,7 @@ var app = angular.module('bergenstem', ['ngRoute']).
 			
 	}])
 
-app.controller('StemController', function() {
+app.controller('StemController', function($routeParams) {
 	this.project = projects;
 	this.project2 = projects2;
 	this.project3 = projects3;
