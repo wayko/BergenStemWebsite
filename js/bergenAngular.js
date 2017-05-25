@@ -11,14 +11,14 @@ var app = angular.module('bergenstem', ['ngRoute']).
 			when("/project5/:projectName",{templateUrl:"partials/test5.html"}).
 			when("/project6/:projectName",{templateUrl:"partials/test6.html"}).
 			when("/project7/:projectName",{templateUrl:"partials/test7.html"}).
-			when("/projects",{redirectTo:"/partials/test.html"}).
+			when("/new",{templateUrl:"partials/new.html"}).
 			otherwise({redirectTo:"/"});
 			
 
 			
 	}])
 
-app.controller('StemController', function($routeParams) {
+app.controller('StemController', function() {
 	this.project = projects;
 	this.project2 = projects2;
 	this.project3 = projects3;
@@ -27,7 +27,15 @@ app.controller('StemController', function($routeParams) {
 	this.project6 = projects6;
 	this.project7 = projects7;
 	});
+app.controller('AddController', function(){
 	
+	
+	for(var i = 0; i < projects.length;i++)
+	{
+		this.project = projects[i];
+	}
+	this.project[0];
+});
 	var projects = [
 	{
 		projectName: 'Algae Biodiesel',

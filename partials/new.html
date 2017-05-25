@@ -1,12 +1,15 @@
+
 <form>
-	Project Name: <input ng-model="project.projectName"><br />
-	Project Description: <input ng-model="project.projectDesc.para1"><br />
-	Image File: <input ng-model="project.images"><br />
-	Project Leader: <input ng-model="project.projectLeader"><br />
-	Faculty Member: <input ng-model="project.projectFac"><br />
-	Project Member: <input ng-model="project.projectMembers.member1"><br />
-	Project Meeting Time: <input ng-model="project.projectMeeting"><br />
-	Project Blog: <input ng-model="project.projectBlog"><br />
-	<button ng-click="save()" class="btn btn-primary">Save</button>
-	
+	Project Name: <input><br />
+	Project Description: <input><br />
+	Image File: <input><br />
+	Project Leader: <input><br />
+	Faculty Member: <input><br />
+	Project Member: <input><br />
+	Project Meeting Time: <input><br />
+	Project Blog: <input><br />
+	<button class="btn btn-primary">Save</button>
 </form>	
+<div ng-controller="AddController as addCtrl">
+  ProectName: {{addCtrl.project}}
+  </div>
