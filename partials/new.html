@@ -10,6 +10,12 @@
 	Project Blog: <input><br />
 	<button class="btn btn-primary">Save</button>
 </form>	
-<div ng-controller="AddController as addCtrl">
-  ProectName: {{addCtrl.project}}
+<div ng-controller="AddController">
+  ProjectName: {{AddController.name}}
+  <br />
+  projectIndex:<a href="" ng-repeat="s in project" ng-click="doIt($index)">{{s.projectName}}<br /></a>
+  </div>
+  
+<div id="projectLocation">
+test
   </div>

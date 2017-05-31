@@ -4,13 +4,14 @@ var app = angular.module('bergenstem', ['ngRoute']).
 		$locationProvider.html5Mode(true);
 		$routeProvider.
 			when("/",{templateUrl:"partials/list.html"}).
-			when("/project/:projectName",{templateUrl:"partials/test.html"}).
-			when("/project2/:projectName",{templateUrl:"partials/test2.html"}).
-			when("/project3/:projectName",{templateUrl:"partials/test3.html"}).
-			when("/project4/:projectName",{templateUrl:"partials/test4.html"}).
-			when("/project5/:projectName",{templateUrl:"partials/test5.html"}).
-			when("/project6/:projectName",{templateUrl:"partials/test6.html"}).
-			when("/project7/:projectName",{templateUrl:"partials/test7.html"}).
+			when("/project/:index/:projectName",{templateUrl:"partials/test.html"}).
+			when("/project2/:index/:projectName",{templateUrl:"partials/test2.html"}).
+			when("/project3/:index/:projectName",{templateUrl:"partials/test3.html"}).
+			when("/project4/:index/:projectName",{templateUrl:"partials/test4.html"}).
+			when("/project5/:index/:projectName",{templateUrl:"partials/test5.html"}).
+			when("/project6/:index/:projectName",{templateUrl:"partials/test6.html"}).
+			when("/project7/:index/:projectName",{templateUrl:"partials/test7.html"}).
+			when("/b2b",{url:"/bergenstem/b2b.html"}).
 			when("/new",{templateUrl:"partials/new.html"}).
 			otherwise({redirectTo:"/"});
 			
@@ -27,14 +28,15 @@ app.controller('StemController', function() {
 	this.project6 = projects6;
 	this.project7 = projects7;
 	});
-app.controller('AddController', function(){
+app.controller('AddController', function($scope){
 	
+	$scope.doIt = function(index){
+		var div = document.getElementById('projectLocation');
+	div.innerHTML = '<a href="project/' + index + '/'+ projects[index].projectName +'"><li class="projecthead">'+projects[index].projectName+'</li></a><li><img src="'+ projects[index].images[0] +'" style="width:420px;height:350px;" onerror="this.onerror=null;this.src="images/default.jpg;"/></li><h3>Description</h3><li><p>'+ projects[index].projectDesc[0].para1 + '</p></li>' + projects[index].projectDesc[0].para2 + '</p></li><li><p>'+ projects[index].projectDesc[0].para3 + '</p></li><h3>Team Leader</h3><li><p>' + projects[index].projectLeader + '</p></li><h3>Faculty</h3><li><p>' + projects[index].projectFac + '</p></li><h3>Team Members</h3>'+ projects[index].projectMembers[0].member1 +',' + projects[index].projectMembers[0].member2 +',' + projects[index].projectMembers[0].member3 +',' + projects[index].projectMembers[0].member4 +',' + projects[index].projectMembers[0].member5 +','+ projects[index].projectMembers[0].member6 +',' + projects[index].projectMembers[0].member7 +',' + projects[index].projectMembers[0].member8 +',' + projects[index].projectMembers[0].member9 +',' + projects[index].projectMembers[0].member10 +'<h3>Meetings</h3><li><p>' + projects[index].projectMeeting+ '</p></li><h3>Project Blog</h3><li><p>' + projects[index].projectBlog + '</p></li>'
 	
-	for(var i = 0; i < projects.length;i++)
-	{
-		this.project = projects[i];
+
 	}
-	this.project[0];
+	 $scope.project = projects;
 });
 	var projects = [
 	{
@@ -56,7 +58,15 @@ app.controller('AddController', function(){
 		projectFac: 'Professor Bruce Benjamin (bbenjamin@bergen.edu) ',
 		projectMembers:[{
 			member1:'',
-			member2:''
+			member2:'',
+			member3:'',
+			member4:'',
+			member5:'',
+			member6:'',
+			member7:'',
+			member8:'',
+			member9:'',
+			member10:''
 		}
 		],                           
 		projectMeeting:'For more information please contact the Bruce Benjamin',
@@ -66,7 +76,9 @@ app.controller('AddController', function(){
 		projectName: 'Block House',
 		projectDesc:[
 		{
-		para1:'An off the grid block house for the purpose of storing, working and testing STEM projects. Tests such as material efficiency and heat transfer. Solar panel and wind turbine data collection.'
+		para1:'An off the grid block house for the purpose of storing, working and testing STEM projects. Tests such as material efficiency and heat transfer. Solar panel and wind turbine data collection.',
+		para2:'',
+		para3:''
 		}
 		],
 		images:[
@@ -79,7 +91,15 @@ app.controller('AddController', function(){
 		projectFac: 'Prof. Joseph Sivo',
 		projectMembers:[{
 			member1:'',
-			member2:''
+			member2:'',
+			member3:'',
+			member4:'',
+			member5:'',
+			member6:'',
+			member7:'',
+			member8:'',
+			member9:'',
+			member10:''
 			
 		}],                           
 		projectMeeting:'',
@@ -104,7 +124,15 @@ app.controller('AddController', function(){
 		projectFac: 'Farah Rezae PhD',
 		projectMembers:[{
 			member1:'',
-			member2:''
+			member2:'',
+			member3:'',
+			member4:'',
+			member5:'',
+			member6:'',
+			member7:'',
+			member8:'',
+			member9:'',
+			member10:''
 			
 		}],                           
 		projectMeeting:'Contact Farah Rezae',
@@ -132,7 +160,15 @@ app.controller('AddController', function(){
 		projectFac: '',
 		projectMembers:[{
 			member1:'',
-			member2:''
+			member2:'',
+			member3:'',
+			member4:'',
+			member5:'',
+			member6:'',
+			member7:'',
+			member8:'',
+			member9:'',
+			member10:''
 			
 		}],                           
 		projectMeeting:'Tuesday 10:00 am- 12:00 pm',
@@ -155,7 +191,15 @@ app.controller('AddController', function(){
 		projectFac: 'Prof. Joseph Sivo',
 		projectMembers:[{
 			member1:'Nicolette Filippone',
-			member2:''
+			member2:'',
+			member3:'',
+			member4:'',
+			member5:'',
+			member6:'',
+			member7:'',
+			member8:'',
+			member9:'',
+			member10:''
 			
 		}],                           
 		projectMeeting:'TBA',
@@ -213,7 +257,15 @@ app.controller('AddController', function(){
 		projectFac: ' 	Ron Grosinger',
 		projectMembers:[{
 			member1:'Kassem AlHussein',
-			member2:'Eric Almberg'
+			member2:'Eric Almberg',
+			member3:'',
+			member4:'',
+			member5:'',
+			member6:'',
+			member7:'',
+			member8:'',
+			member9:'',
+			member10:''
 			
 		}],                           
 		projectMeeting:'Saturday 10:00 am- 4:00 pm',
@@ -237,7 +289,15 @@ app.controller('AddController', function(){
 		projectFac: 'Prof. Joseph Sivo',
 		projectMembers:[{
 			member1:'Hiten Patel',
-			member2:'Abreham Mindaye'
+			member2:'Abreham Mindaye',
+			member3:'',
+			member4:'',
+			member5:'',
+			member6:'',
+			member7:'',
+			member8:'',
+			member9:'',
+			member10:''
 			
 		}],                           
 		projectMeeting:'',
@@ -261,7 +321,15 @@ app.controller('AddController', function(){
 		projectFac: 'Professor Paul Griffo',
 		projectMembers:[{
 			member1:'',
-			member2:''
+			member2:'',
+			member3:'',
+			member4:'',
+			member5:'',
+			member6:'',
+			member7:'',
+			member8:'',
+			member9:'',
+			member10:''
 			
 		}],                           
 		projectMeeting:'Monday from 2:00 pm - 4:00 pm and Thursday from 3:00 pm - 4:00pm ',
@@ -289,7 +357,14 @@ app.controller('AddController', function(){
 		projectMembers:[{
 			member1:'Dawn Steele',
 			member2:'Aaron Gonzalez',
-			member3:'Jonny Lazarte'
+			member3:'Jonny Lazarte',
+			member4:'',
+			member5:'',
+			member6:'',
+			member7:'',
+			member8:'',
+			member9:'',
+			member10:''
 			
 		}],                           
 		projectMeeting:'Contact Dawn Steele',
@@ -312,7 +387,15 @@ app.controller('AddController', function(){
 		projectFac: 'Prof. Chapman',
 		projectMembers:[{
 			member1:'',
-			member2:''
+			member2:'',
+			member3:'',
+			member4:'',
+			member5:'',
+			member6:'',
+			member7:'',
+			member8:'',
+			member9:'',
+			member10:''
 			
 		}],                           
 		projectMeeting:'',
@@ -337,7 +420,15 @@ app.controller('AddController', function(){
 		projectFac: 'Professor Joseph Sivo (jsivo@bergen.edu)',
 		projectMembers:[{
 			member1:'Daniela Liberato',
-			member2:'Abereham Mindaye'
+			member2:'Abereham Mindaye',
+			member3:'',
+			member4:'',
+			member5:'',
+			member6:'',
+			member7:'',
+			member8:'',
+			member9:'',
+			member10:''
 			
 		}],                           
 		projectMeeting:'',
@@ -370,7 +461,10 @@ app.controller('AddController', function(){
 			member4:'Jaimin Rana',
 			member5:'Jonathan Romero',
 			member6:'Kimberly Maldonado',
-			member7:'Nikita Gyawali'
+			member7:'Nikita Gyawali',
+			member8:'',
+			member9:'',
+			member10:''
 			
 		}],                           
 		projectMeeting:'Contact Jesse Kent',
@@ -395,7 +489,15 @@ app.controller('AddController', function(){
 		projectFac: 'Professor Bruce Benjamin',
 		projectMembers:[{
 			member1:'Charles Barreto',
-			member2:''
+			member2:'',
+			member3:'',
+			member4:'',
+			member5:'',
+			member6:'',
+			member7:'',
+			member8:'',
+			member9:'',
+			member10:''
 			
 		}],                           
 		projectMeeting:'Wednesday 12pm - 3pm and Thursday 12pm - 6pm in the New STEM room',
@@ -422,7 +524,11 @@ app.controller('AddController', function(){
 			member3:'Jesse Kent',
 			member4:'Jaimin Rana',
 			member5:' Jonathan Romero',
-			member6:'Abraham Mindaye'
+			member6:'Abraham Mindaye',
+			member7:'',
+			member8:'',
+			member9:'',
+			member10:''
 		}],                           
 		projectMeeting:'',
 		projectBlog: 'http://www.bergenstem.org/home.php?p=showproject&name=rocketteam'
@@ -449,7 +555,14 @@ app.controller('AddController', function(){
 		projectMembers:[{
 			member1:'Tamar Tokman',
 			member2:'Karina Palaric',
-			member3:'Nicolette V Filippone'
+			member3:'Nicolette V Filippone',
+			member4:'',
+			member5:'',
+			member6:'',
+			member7:'',
+			member8:'',
+			member9:'',
+			member10:''
 		}],                           
 		projectMeeting:'Every Monday and Wednesdays 11:00 am - 12:30 pm',
 		projectBlog: 'http://seismostem.blogspot.com/'
@@ -473,7 +586,15 @@ app.controller('AddController', function(){
 		projectFac: '',
 		projectMembers:[{
 			member1:'',
-			member2:''
+			member2:'',
+			member3:'',
+			member4:'',
+			member5:'',
+			member6:'',
+			member7:'',
+			member8:'',
+			member9:'',
+			member10:''
 		}],
 		projectMeeting:'',
 		projectBlog: 'http://solarconcentrator1.blogspot.com/'
@@ -502,7 +623,8 @@ app.controller('AddController', function(){
 			member6:'Eber',
 			member7:'Grace Manrique',
 			member8:'Ismet Demiraz',
-			member9:'Sean Hodge'
+			member9:'Sean Hodge',
+			member10:''
 		}],                           
 		projectMeeting:'Wednesday and Friday, 10:30AM-1:30PM',
 		projectBlog: 'http://bccstemuav.blogspot.com/'
@@ -532,7 +654,11 @@ app.controller('AddController', function(){
 			member3:'Anthony Vera',
 			member4:'Richard Mercado',
 			member5:'Nathan Schulzrinne',
-			member6:'Kris Pyatt'
+			member6:'Kris Pyatt',
+			member7:'',
+			member8:'',
+			member9:'',
+			member10:''
 		}],                           
 		projectMeeting:'',
 		projectBlog: 'http://uv-4stem.blogspot.com/'
@@ -554,7 +680,15 @@ app.controller('AddController', function(){
 		projectFac: '',
 		projectMembers:[{
 			member1:'',
-			member2:''
+			member2:'',
+			member3:'',
+			member4:'',
+			member5:'',
+			member6:'',
+			member7:'',
+			member8:'',
+			member9:'',
+			member10:''
 		}],                          
 		projectMeeting:'',
 		projectBlog: 'http://bccwaterchem.blogspot.com/'
@@ -578,7 +712,15 @@ app.controller('AddController', function(){
 		projectFac: 'Prof. Joseph Sivo',
 		projectMembers:[{
 			member1:'',
-			member2:''
+			member2:'',
+			member3:'',
+			member4:'',
+			member5:'',
+			member6:'',
+			member7:'',
+			member8:'',
+			member9:'',
+			member10:''
 		}],                           
 		projectMeeting:'Friday from 4:00 pm - 5:00 pm',
 		projectBlog: 'http://vegeta-stem.blogspot.com/'

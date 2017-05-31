@@ -2,7 +2,7 @@
 <section ng-controller="StemController as stemCtrl">
 <div class="containall row margleft15">
 <ul ng-repeat="stemProject in stemCtrl.project" class="col-xs-12 col-md-12 col-lg-3 w320">
-<a href="project/{{stemProject.projectName}}"><li class="projecthead">{{stemProject.projectName}}</li></a>
+<a href="project/{{$index}}/{{stemCtrl.project[$index].projectName}}"><li class="projecthead">{{stemCtrl.project[$index].projectName}}</li></a>
 <li><img src='{{stemProject.images[0]}}' style="width:320px;height:250px;" onerror="this.onerror=null;this.src='images/default.jpg';"/></li>
 <h3>Description</h3>
 <li><p>{{stemProject.projectDesc[0].para1}}</p></li>
@@ -28,6 +28,8 @@
 <li><p>{{stemProject[0].projectMeeting}}</p></li>
 <h3>Project Blog</h3>
 <li><p>{{stemProject[0].projectBlog}}</p></li>
+<h3>Index</h3>
+<li>{{$index}}</li>
 </ul>
 </div>
 </section>
