@@ -39,6 +39,8 @@ app.controller('AddController', function($scope){
 	angular.forEach(projects[index].images, function(value,key)
 	{
 		imgdiv.innerHTML = imgdiv.innerHTML + '<div class="item"><img src="'+ projects[index].images[key] +'"  onerror="this.onerror=null;this.src=\'images/default.jpg\';"/><div class="carousel-caption biggerfont">' + projects[index].projectName + '</div>'
+		
+		console.log(key + ": " + value);
 	});
 	
 }
@@ -348,7 +350,7 @@ app.controller('AddController', function($scope){
 		 'images/electriccar8.jpg',
 		 'images/electriccar9.jpg',
 		 'images/electriccar10.jpg',
-		 'images/electriccar12.jpg',
+		 'images/electriccar11.jpg',
 		 'images/electriccar12.jpg',
 		
 			
