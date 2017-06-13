@@ -3,16 +3,16 @@ var app = angular.module('bergenstem', ['ngRoute']).
 	config(['$routeProvider', '$locationProvider',function($routeProvider, $locationProvider){
 		$locationProvider.html5Mode(true);
 		$routeProvider.
-			when("/",{templateUrl:"partials/list.html"}).
-			when("/project/:index/:projectName",{templateUrl:"partials/test.html"}).
-			when("/project2/:index/:projectName",{templateUrl:"partials/test2.html"}).
-			when("/project3/:index/:projectName",{templateUrl:"partials/test3.html"}).
-			when("/project4/:index/:projectName",{templateUrl:"partials/test4.html"}).
-			when("/project5/:index/:projectName",{templateUrl:"partials/test5.html"}).
-			when("/project6/:index/:projectName",{templateUrl:"partials/test6.html"}).
-			when("/project7/:index/:projectName",{templateUrl:"partials/test7.html"}).
-			when("/b2b",{url:"/bergenstem/b2b.html"}).
-			when("/new",{templateUrl:"partials/new.html"}).
+			when("/",{templateUrl:"partials/new.html"}).
+			when("/project/:index/:projectName",{templateUrl:"partials/new.html"}).
+			when("/project2/:index/:projectName",{templateUrl:"partials/new.html"}).
+			when("/project3/:index/:projectName",{templateUrl:"partials/new.html"}).
+			when("/project4/:index/:projectName",{templateUrl:"partials/new.html"}).
+			when("/project5/:index/:projectName",{templateUrl:"partials/new.html"}).
+			when("/project6/:index/:projectName",{templateUrl:"partials/new.html"}).
+			when("/project7/:index/:projectName",{templateUrl:"partials/new.html"}).
+			when("/b2b",{redirectTo:"/bergenstem/b2b.html"}).
+			when("/project",{templateUrl:"partials/new.html"}).
 			otherwise({redirectTo:"/"});
 			
 
@@ -32,11 +32,83 @@ app.controller('AddController', function($scope){
 	
 	$scope.doIt = function(index){
 		var div = document.getElementById('projectLocation');
-	div.innerHTML = '<a href="project/' + index + '/'+ projects[index].projectName +'"><li class="projecthead">'+projects[index].projectName+'</li></a><li><img src="'+ projects[index].images[0] +'" style="width:420px;height:350px;" onerror="this.onerror=null;this.src="images/default.jpg;"/></li><h3>Description</h3><li><p>'+ projects[index].projectDesc[0].para1 + '</p></li>' + projects[index].projectDesc[0].para2 + '</p></li><li><p>'+ projects[index].projectDesc[0].para3 + '</p></li><h3>Team Leader</h3><li><p>' + projects[index].projectLeader + '</p></li><h3>Faculty</h3><li><p>' + projects[index].projectFac + '</p></li><h3>Team Members</h3>'+ projects[index].projectMembers[0].member1 +',' + projects[index].projectMembers[0].member2 +',' + projects[index].projectMembers[0].member3 +',' + projects[index].projectMembers[0].member4 +',' + projects[index].projectMembers[0].member5 +','+ projects[index].projectMembers[0].member6 +',' + projects[index].projectMembers[0].member7 +',' + projects[index].projectMembers[0].member8 +',' + projects[index].projectMembers[0].member9 +',' + projects[index].projectMembers[0].member10 +'<h3>Meetings</h3><li><p>' + projects[index].projectMeeting+ '</p></li><h3>Project Blog</h3><li><p>' + projects[index].projectBlog + '</p></li>'
+		var imgdiv = document.getElementById('getImgages');
+		
+	div.innerHTML = '<a href="project/' + index + '/'+ projects[index].projectName +'"><li class="projecthead">'+projects[index].projectName+'</li></a><li><img src="'+ projects[index].images[0] +'" style="width:420px;height:350px;" onerror="this.onerror=null;this.src=\'images/default.jpg\';"/></li><h3>Description</h3><li><p>'+ projects[index].projectDesc[0].para1 + '</p></li>' + projects[index].projectDesc[0].para2 + '</p></li><li><p>'+ projects[index].projectDesc[0].para3 + '</p></li><h3>Team Leader</h3><li><p>' + projects[index].projectLeader + '</p></li><h3>Faculty</h3><li><p>' + projects[index].projectFac + '</p></li><h3>Team Members</h3>'+ projects[index].projectMembers[0].member1 +',' + projects[index].projectMembers[0].member2 +',' + projects[index].projectMembers[0].member3 +',' + projects[index].projectMembers[0].member4 +',' + projects[index].projectMembers[0].member5 +','+ projects[index].projectMembers[0].member6 +',' + projects[index].projectMembers[0].member7 +',' + projects[index].projectMembers[0].member8 +',' + projects[index].projectMembers[0].member9 +',' + projects[index].projectMembers[0].member10 +'<h3>Meetings</h3><li><p>' + projects[index].projectMeeting+ '</p></li><h3>Project Blog</h3><li><p>' + projects[index].projectBlog + '</p></li>'
+	imgdiv.innerHTML = '<div class="item active"><img src="images/loading.gif" alt="Projects"><div class="carousel-caption biggerfont">Bergen Stem</div></div>';
+	angular.forEach(projects[index].images, function(value,key)
+	{
+		imgdiv.innerHTML = imgdiv.innerHTML + '<div class="item"><img src="'+ projects[index].images[key] +'"  onerror="this.onerror=null;this.src=\'images/default.jpg\';"/><div class="carousel-caption biggerfont">' + projects[index].projectName + '</div>'
+	});
 	
-
-	}
-	 $scope.project = projects;
+}
+	$scope.doIt2 = function(index){
+		var div = document.getElementById('projectLocation');
+		var imgdiv = document.getElementById('getImgages');
+	div.innerHTML = '<a href="project/' + index + '/'+ projects2[index].projectName +'"><li class="projecthead">'+projects2[index].projectName+'</li></a><li><img src="'+ projects2[index].images[0] +'" style="width:420px;height:350px;" onerror="this.onerror=null;this.src=\'images/default.jpg\';"/></li><h3>Description</h3><li><p>'+ projects2[index].projectDesc[0].para1 + '</p></li>' + projects2[index].projectDesc[0].para2 + '</p></li><li><p>'+ projects2[index].projectDesc[0].para3 + '</p></li><h3>Team Leader</h3><li><p>' + projects2[index].projectLeader + '</p></li><h3>Faculty</h3><li><p>' + projects2[index].projectFac + '</p></li><h3>Team Members</h3>'+ projects2[index].projectMembers[0].member1 +',' + projects2[index].projectMembers[0].member2 +',' + projects2[index].projectMembers[0].member3 +',' + projects2[index].projectMembers[0].member4 +',' + projects2[index].projectMembers[0].member5 +','+ projects2[index].projectMembers[0].member6 +',' + projects2[index].projectMembers[0].member7 +',' + projects2[index].projectMembers[0].member8 +',' + projects2[index].projectMembers[0].member9 +',' + projects2[index].projectMembers[0].member10 +'<h3>Meetings</h3><li><p>' + projects2[index].projectMeeting+ '</p></li><h3>Project Blog</h3><li><p>' + projects2[index].projectBlog + '</p></li>'
+		imgdiv.innerHTML = '<div class="item active"><img src="images/loading.gif" alt="Projects"><div class="carousel-caption biggerfont">Bergen Stem</div></div>';
+		angular.forEach(projects2[index].images, function(value,key)
+	{
+		imgdiv.innerHTML = imgdiv.innerHTML + '<div class="item"><img src="'+ projects2[index].images[key] +'"  onerror="this.onerror=null;this.src=\'images/default.jpg\';"/><div class="carousel-caption biggerfont">' + projects2[index].projectName + '</div>'
+	});
+}
+	$scope.doIt3 = function(index){
+		var div = document.getElementById('projectLocation');
+		var imgdiv = document.getElementById('getImgages');
+	div.innerHTML = '<a href="project/' + index + '/'+ projects3[index].projectName +'"><li class="projecthead">'+projects3[index].projectName+'</li></a><li><img src="'+ projects3[index].images[0] +'" style="width:420px;height:350px;" onerror="this.onerror=null;this.src=\'images/default.jpg\';"/></li><h3>Description</h3><li><p>'+ projects3[index].projectDesc[0].para1 + '</p></li>' + projects3[index].projectDesc[0].para2 + '</p></li><li><p>'+ projects3[index].projectDesc[0].para3 + '</p></li><h3>Team Leader</h3><li><p>' + projects3[index].projectLeader + '</p></li><h3>Faculty</h3><li><p>' + projects3[index].projectFac + '</p></li><h3>Team Members</h3>'+ projects3[index].projectMembers[0].member1 +',' + projects3[index].projectMembers[0].member2 +',' + projects3[index].projectMembers[0].member3 +',' + projects3[index].projectMembers[0].member4 +',' + projects3[index].projectMembers[0].member5 +','+ projects3[index].projectMembers[0].member6 +',' + projects3[index].projectMembers[0].member7 +',' + projects3[index].projectMembers[0].member8 +',' + projects3[index].projectMembers[0].member9 +',' + projects3[index].projectMembers[0].member10 +'<h3>Meetings</h3><li><p>' + projects3[index].projectMeeting+ '</p></li><h3>Project Blog</h3><li><p>' + projects3[index].projectBlog + '</p></li>'
+		imgdiv.innerHTML = '<div class="item active"><img src="images/loading.gif" alt="Projects"><div class="carousel-caption biggerfont">Bergen Stem</div></div>';
+		angular.forEach(projects3[index].images, function(value,key)
+	{
+		imgdiv.innerHTML = imgdiv.innerHTML + '<div class="item"><img src="'+ projects3[index].images[key] +'"  onerror="this.onerror=null;this.src=\'images/default.jpg\';"/><div class="carousel-caption biggerfont">' + projects3[index].projectName + '</div>'
+	});
+}
+	$scope.doIt4 = function(index){
+		var div = document.getElementById('projectLocation');
+		var imgdiv = document.getElementById('getImgages');
+	div.innerHTML = '<a href="project/' + index + '/'+ projects4[index].projectName +'"><li class="projecthead">'+projects4[index].projectName+'</li></a><li><img src="'+ projects4[index].images[0] +'" style="width:420px;height:350px;" onerror="this.onerror=null;this.src=\'images/default.jpg\';"/></li><h3>Description</h3><li><p>'+ projects4[index].projectDesc[0].para1 + '</p></li>' + projects4[index].projectDesc[0].para2 + '</p></li><li><p>'+ projects4[index].projectDesc[0].para3 + '</p></li><h3>Team Leader</h3><li><p>' + projects4[index].projectLeader + '</p></li><h3>Faculty</h3><li><p>' + projects4[index].projectFac + '</p></li><h3>Team Members</h3>'+ projects4[index].projectMembers[0].member1 +',' + projects4[index].projectMembers[0].member2 +',' + projects4[index].projectMembers[0].member3 +',' + projects4[index].projectMembers[0].member4 +',' + projects4[index].projectMembers[0].member5 +','+ projects4[index].projectMembers[0].member6 +',' + projects4[index].projectMembers[0].member7 +',' + projects4[index].projectMembers[0].member8 +',' + projects4[index].projectMembers[0].member9 +',' + projects4[index].projectMembers[0].member10 +'<h3>Meetings</h3><li><p>' + projects4[index].projectMeeting+ '</p></li><h3>Project Blog</h3><li><p>' + projects4[index].projectBlog + '</p></li>'
+	imgdiv.innerHTML = '<div class="item active"><img src="images/loading.gif" alt="Projects"><div class="carousel-caption biggerfont">Bergen Stem</div></div>';
+	angular.forEach(projects4[index].images, function(value,key)
+	{
+		imgdiv.innerHTML = imgdiv.innerHTML + '<div class="item"><img src="'+ projects4[index].images[key] +'"  onerror="this.onerror=null;this.src=\'images/default.jpg\';"/><div class="carousel-caption biggerfont">' + projects4[index].projectName + '</div>'
+	});
+}
+	$scope.doIt5 = function(index){
+		var div = document.getElementById('projectLocation');
+		var imgdiv = document.getElementById('getImgages');
+	div.innerHTML = '<a href="project/' + index + '/'+ projects5[index].projectName +'"><li class="projecthead">'+projects5[index].projectName+'</li></a><li><img src="'+ projects5[index].images[0] +'" style="width:420px;height:350px;" onerror="this.onerror=null;this.src=\'images/default.jpg\';"/></li><h3>Description</h3><li><p>'+ projects5[index].projectDesc[0].para1 + '</p></li>' + projects5[index].projectDesc[0].para2 + '</p></li><li><p>'+ projects5[index].projectDesc[0].para3 + '</p></li><h3>Team Leader</h3><li><p>' + projects5[index].projectLeader + '</p></li><h3>Faculty</h3><li><p>' + projects5[index].projectFac + '</p></li><h3>Team Members</h3>'+ projects5[index].projectMembers[0].member1 +',' + projects5[index].projectMembers[0].member2 +',' + projects5[index].projectMembers[0].member3 +',' + projects5[index].projectMembers[0].member4 +',' + projects5[index].projectMembers[0].member5 +','+ projects5[index].projectMembers[0].member6 +',' + projects5[index].projectMembers[0].member7 +',' + projects5[index].projectMembers[0].member8 +',' + projects5[index].projectMembers[0].member9 +',' + projects5[index].projectMembers[0].member10 +'<h3>Meetings</h3><li><p>' + projects5[index].projectMeeting+ '</p></li><h3>Project Blog</h3><li><p>' + projects5[index].projectBlog + '</p></li>'
+	imgdiv.innerHTML = '<div class="item active"><img src="images/loading.gif" alt="Projects"><div class="carousel-caption biggerfont">Bergen Stem</div></div>';
+	angular.forEach(projects5[index].images, function(value,key)
+	{
+		imgdiv.innerHTML = imgdiv.innerHTML + '<div class="item"><img src="'+ projects5[index].images[key] +'"  onerror="this.onerror=null;this.src=\'images/default.jpg\';"/><div class="carousel-caption biggerfont">' + projects5[index].projectName + '</div>'
+	});
+}
+	$scope.doIt6 = function(index){
+		var div = document.getElementById('projectLocation');
+		var imgdiv = document.getElementById('getImgages');
+	div.innerHTML = '<a href="project/' + index + '/'+ projects6[index].projectName +'"><li class="projecthead">'+projects6[index].projectName+'</li></a><li><img src="'+ projects6[index].images[0] +'" style="width:420px;height:350px;" onerror="this.onerror=null;this.src=\'images/default.jpg\';"/></li><h3>Description</h3><li><p>'+ projects6[index].projectDesc[0].para1 + '</p></li>' + projects6[index].projectDesc[0].para2 + '</p></li><li><p>'+ projects6[index].projectDesc[0].para3 + '</p></li><h3>Team Leader</h3><li><p>' + projects6[index].projectLeader + '</p></li><h3>Faculty</h3><li><p>' + projects6[index].projectFac + '</p></li><h3>Team Members</h3>'+ projects6[index].projectMembers[0].member1 +',' + projects6[index].projectMembers[0].member2 +',' + projects6[index].projectMembers[0].member3 +',' + projects6[index].projectMembers[0].member4 +',' + projects6[index].projectMembers[0].member5 +','+ projects6[index].projectMembers[0].member6 +',' + projects6[index].projectMembers[0].member7 +',' + projects6[index].projectMembers[0].member8 +',' + projects6[index].projectMembers[0].member9 +',' + projects6[index].projectMembers[0].member10 +'<h3>Meetings</h3><li><p>' + projects6[index].projectMeeting+ '</p></li><h3>Project Blog</h3><li><p>' + projects6[index].projectBlog + '</p></li>'
+	imgdiv.innerHTML = '<div class="item active"><img src="images/loading.gif" alt="Projects"><div class="carousel-caption biggerfont">Bergen Stem</div></div>';
+	angular.forEach(projects6[index].images, function(value,key)
+	{
+		imgdiv.innerHTML = imgdiv.innerHTML + '<div class="item"><img src="'+ projects6[index].images[key] +'"  onerror="this.onerror=null;this.src=\'images/default.jpg\';"/><div class="carousel-caption biggerfont">' + projects6[index].projectName + '</div>'
+	});
+}
+	$scope.doIt7 = function(index){
+		var div = document.getElementById('projectLocation');
+		var imgdiv = document.getElementById('getImgages');
+	div.innerHTML = '<a href="project/' + index + '/'+ projects7[index].projectName +'"><li class="projecthead">'+projects7[index].projectName+'</li></a><li><img src="'+ projects7[index].images[0] +'" style="width:420px;height:350px;" onerror="this.onerror=null;this.src=\'images/default.jpg\';"/></li><h3>Description</h3><li><p>'+ projects7[index].projectDesc[0].para1 + '</p></li>' + projects7[index].projectDesc[0].para2 + '</p></li><li><p>'+ projects7[index].projectDesc[0].para3 + '</p></li><h3>Team Leader</h3><li><p>' + projects7[index].projectLeader + '</p></li><h3>Faculty</h3><li><p>' + projects7[index].projectFac + '</p></li><h3>Team Members</h3>'+ projects7[index].projectMembers[0].member1 +',' + projects7[index].projectMembers[0].member2 +',' + projects7[index].projectMembers[0].member3 +',' + projects7[index].projectMembers[0].member4 +',' + projects7[index].projectMembers[0].member5 +','+ projects7[index].projectMembers[0].member6 +',' + projects7[index].projectMembers[0].member7 +',' + projects7[index].projectMembers[0].member8 +',' + projects7[index].projectMembers[0].member9 +',' + projects7[index].projectMembers[0].member10 +'<h3>Meetings</h3><li><p>' + projects7[index].projectMeeting+ '</p></li><h3>Project Blog</h3><li><p>' + projects7[index].projectBlog + '</p></li>'
+	imgdiv.innerHTML = '<div class="item active"><img src="images/loading.gif" alt="Projects"><div class="carousel-caption biggerfont">Bergen Stem</div></div>';
+	angular.forEach(projects7[index].images, function(value,key)
+	{
+		imgdiv.innerHTML = imgdiv.innerHTML + '<div class="item"><img src="'+ projects7[index].images[key] +'"  onerror="this.onerror=null;this.src=\'images/default.jpg\';"/><div class="carousel-caption biggerfont">' + projects7[index].projectName + '</div>'
+	});
+}
+	$scope.project = projects;
+	$scope.project2 = projects2;
+	$scope.project3 = projects3;
+	$scope.project4 = projects4;
+	$scope.project5 = projects5;
+	$scope.project6 = projects6;
+	$scope.project7 = projects7;
 });
 	var projects = [
 	{
@@ -51,6 +123,13 @@ app.controller('AddController', function($scope){
 		images:[
 		
 		 'images/algea1.jpg',
+		'images/algea2.jpg',
+		'images/algea3.jpg',
+		'images/algea4.jpg',
+		'images/algea5.jpg',
+		'images/algea6.jpg',
+		'images/algea7.jpg',
+		'images/algea8.jpg',
 		
 			
 		],
@@ -84,6 +163,13 @@ app.controller('AddController', function($scope){
 		images:[
 		
 		 'images/blockhouse1.jpg',
+		 'images/blockhouse2.jpg',
+		 'images/blockhouse3.jpg',
+		 'images/blockhouse4.jpg',
+		 'images/blockhouse5.jpg',
+		 'images/blockhouse6.jpg',
+		 'images/blockhouse7.jpg',
+		 'images/blockhouse8.jpg',
 		
 			
 		],
@@ -153,6 +239,9 @@ app.controller('AddController', function($scope){
 		images:[
 		
 		 'images/computervision1.jpg',
+		 'images/computervision2.jpg',
+		 'images/computervision3.jpg',
+		 'images/computervision4.jpg',
 		
 			
 		],
@@ -217,7 +306,7 @@ app.controller('AddController', function($scope){
 		images:[
 		
 		 'images/eeg1.jpg',
-		
+		'images/eeg2.jpg',
 			
 		],
 		projectLeader: 'Sheron Mehak and Alexander Thomas ( smehak@me.bergen.edu and athomas69825@me.bergen.edu )',
@@ -250,6 +339,17 @@ app.controller('AddController', function($scope){
 		images:[
 		
 		 'images/electriccar1.jpg',
+		 'images/electriccar2.jpg',
+		 'images/electriccar3.jpg',
+		 'images/electriccar4.jpg',
+		 'images/electriccar5.jpg',
+		 'images/electriccar6.jpg',
+		 'images/electriccar7.jpg',
+		 'images/electriccar8.jpg',
+		 'images/electriccar9.jpg',
+		 'images/electriccar10.jpg',
+		 'images/electriccar12.jpg',
+		 'images/electriccar12.jpg',
 		
 			
 		],
@@ -282,6 +382,11 @@ app.controller('AddController', function($scope){
 		images:[
 		
 		 'images/groundstation.jpg',
+		 'images/groundstation1.jpg',
+		 'images/groundstation2.jpg',
+		 'images/groundstation3.jpg',
+		 'images/groundstation4.jpg',
+		 'images/groundstation5.jpg',
 		
 			
 		],
@@ -314,7 +419,7 @@ app.controller('AddController', function($scope){
 		images:[
 		
 		 'images/highalt1.jpg',
-		
+		'images/highalt2.jpg',
 			
 		],
 		projectLeader: '',
@@ -413,7 +518,8 @@ app.controller('AddController', function($scope){
 		images:[
 		
 		 'images/pedal.jpg',
-		
+		'images/pedal1.jpg',
+		'images/pedal2.jpg',
 			
 		],
 		projectLeader: 'Maryam Echreshzadeh, Sibora Peca',
@@ -449,7 +555,14 @@ app.controller('AddController', function($scope){
 		images:[
 		
 		 'images/radio.jpg',
-		
+		'images/radio1.jpg',
+		'images/radio2.jpg',
+		'images/radio3.jpg',
+		'images/radio4.jpg',
+		'images/radio5.jpg',
+		'images/radio6.jpg',
+		'images/radio7.jpg',
+		'images/radio8.jpg',
 			
 		],
 		projectLeader: 'Jesse Kent (jkent@me.bergen.edu)',
@@ -482,6 +595,7 @@ app.controller('AddController', function($scope){
 		images:[
 		
 		 'images/robotics1.jpg',
+		 'images/robotics2.jpg',
 		
 			
 		],
@@ -546,8 +660,12 @@ app.controller('AddController', function($scope){
 		],
 		images:[
 		
-		 'images/seiso.jpg',
-		
+		 'images/seismograph.jpg',
+		'images/seismograph1.jpg',
+		'images/seismograph2.jpg',
+		'images/seismograph3.jpg',
+		'images/seismograph4.jpg',
+		'images/seismograph5.jpg',
 			
 		],
 		projectLeader: 'Tamar Tokman (tamartokman@gmail.com), Karina Palaric',
@@ -579,7 +697,7 @@ app.controller('AddController', function($scope){
 		images:[
 		
 		 'images/solar.jpg',
-		
+		 'images/solar1.jpg',
 			
 		],
 		projectLeader: '',
@@ -609,6 +727,11 @@ app.controller('AddController', function($scope){
 		images:[
 		
 		 'images/unmanned.jpg',
+		 'images/unmanned1.jpg',
+		 'images/unmanned2.jpg',
+		 'images/unmanned3.jpg',
+		 'images/unmanned4.jpg',
+		 'images/unmanned5.jpg',
 		
 			
 		],
@@ -642,7 +765,14 @@ app.controller('AddController', function($scope){
 		],
 		images:[
 		
+		 'images/uav.jpg',
 		 'images/uav1.jpg',
+		 'images/uav2.jpg',
+		 'images/uav3.jpg',
+		 'images/uav4.jpg',
+		 'images/uav5.jpg',
+		 'images/uav6.jpg',
+		 'images/uav7.jpg',
 		
 			
 		],
@@ -705,6 +835,16 @@ app.controller('AddController', function($scope){
 		images:[
 		
 		 'images/vegeta.jpg',
+		 'images/vegeta1.jpg',
+		 'images/vegeta2.jpg',
+		 'images/vegeta3.jpg',
+		 'images/vegeta4.jpg',
+		 'images/vegeta5.jpg',
+		 'images/vegeta6.jpg',
+		 'images/vegeta7.jpg',
+		 'images/vegeta8.jpg',
+		 'images/vegeta9.jpg',
+		 'images/vegeta10.jpg',
 		
 			
 		],
