@@ -5,7 +5,7 @@
 <section ng-controller="AddController">
 <div class="containall row margleft15">
 <ul ng-repeat="stemProject in project" class="col-xs-12 col-md-12 col-lg-3 w320">
-<a href="#"><li class="projecthead" ng-click="doIt($index)"ng-click="doIt($index)">{{stemProject.projectName}}</li></a>
+<a href="#"><li class="projecthead" ng-click="doIt($index)">{{stemProject.projectName}}</li></a>
 <li><img src='{{stemProject.images[0]}}' style="width:420px;height:350px;" onerror="this.onerror=null;this.src='images/default.jpg';"/></li>
 </ul>
 </div>
