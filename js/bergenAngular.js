@@ -11,6 +11,7 @@ var app = angular.module('bergenstem', ['ngRoute']).
 			when("/project5/:index/:projectName",{templateUrl:"partials/new.html"}).
 			when("/project6/:index/:projectName",{templateUrl:"partials/new.html"}).
 			when("/project7/:index/:projectName",{templateUrl:"partials/new.html"}).
+			when("/b2b",{templateUrl:"b2b.html"}).
 			when("/project",{templateUrl:"partials/new.html"}).
 			otherwise({redirectTo:"/"});
 			
@@ -103,6 +104,57 @@ app.controller('AddController', function($scope){
 		imgdiv.innerHTML = imgdiv.innerHTML + '<div class="item"><img src="'+ projects7[index].images[key] +'"  onerror="this.onerror=null;this.src=\'images/default.jpg\';"/><div class="carousel-caption biggerfont">' + projects7[index].projectName + '</div>'
 	});
 }
+	$scope.project = projects;
+	$scope.project2 = projects2;
+	$scope.project3 = projects3;
+	$scope.project4 = projects4;
+	$scope.project5 = projects5;
+	$scope.project6 = projects6;
+	$scope.project7 = projects7;
+});
+
+app.controller('RanImgController', function($scope){
+	allProject = [];
+	allImages = [];
+	allProject.push(projects);
+	allProject.push(projects2);
+	allProject.push(projects3);
+	allProject.push(projects4);
+	allProject.push(projects5);
+	allProject.push(projects6);
+	allProject.push(projects7);
+	var imgdiv = document.getElementById('getImgages');
+	imgdiv.innerHTML = '<div class="item active"><img src="images/loading.gif" alt="Projects"><div class="carousel-caption biggerfont">Bergen Stem</div></div>';
+	$scope.getImage = function(){
+		
+		var rndNum;
+		var x;
+		var y;
+		var z;
+		for(x = 0; x < allProject.length; x++)
+		{
+			for(y= 0; y < allProject[x].length; y++)
+			{
+				for(z = 0; z< allProject[x][y].images.length; z++)
+				{
+					allImages.push(allProject[x][y].images[z]);
+				}
+			}
+		}
+		rndNum = Math.floor(Math.random() * allImages.length); 
+		rndNum2 = Math.floor(Math.random() * allImages.length); 
+		rndNum3 = Math.floor(Math.random() * allImages.length); 
+		
+		imgdiv.innerHTML = imgdiv.innerHTML + '<div class="item"><img src="'+ allImages[rndNum -1] +'"  onerror="this.onerror=null;this.src=\'images/default.jpg\';"/><div class="carousel-caption biggerfont">'+ allImages[rndNum -1] + '</div>'
+		
+		imgdiv.innerHTML = imgdiv.innerHTML + '<div class="item"><img src="'+ allImages[rndNum2 -1] +'"  onerror="this.onerror=null;this.src=\'images/default.jpg\';"/><div class="carousel-caption biggerfont">'+ allImages[rndNum2 -1] + '</div>'
+		
+		imgdiv.innerHTML = imgdiv.innerHTML + '<div class="item"><img src="'+ allImages[rndNum3 -1] +'"  onerror="this.onerror=null;this.src=\'images/default.jpg\';"/><div class="carousel-caption biggerfont">'+ allImages[rndNum3 -1] + '</div>'
+		
+		
+	}
+	
+	
 	$scope.project = projects;
 	$scope.project2 = projects2;
 	$scope.project3 = projects3;
