@@ -1,0 +1,162 @@
+/*******************************************************************************/
+/* Projects                                                                    */
+/*******************************************************************************/	
+.uavparallax{
+background-image: url("../images/uav1.jpg");
+min-height: 1000px;
+background-attachment:fixed;
+background-position: center;
+background-repeat: none;
+background-size: cover;
+}
+.uavtext{
+
+}
+.roboticsparallax{
+background-image: url("../images/robotics1.jpg");
+min-height: 1000px;
+background-attachment:fixed;
+background-position: center;
+background-repeat: none;
+background-size: cover;
+}
+.roboticstext{
+
+}
+.introparallax{
+background-image: url("../images/stemintro.jpg");
+min-height: 1300px;
+background-attachment:fixed;
+background-position: center;
+background-repeat:no-repeat;
+background-size: auto;
+
+}
+.introstext{
+height:1300px;
+background-color:transparent;
+font-size:25px;
+width:90%;
+word-wrap: break-word;
+text-align:left;
+margin-left: 15px;
+}
+.algeaparallax{
+background-image: url("../images/algea1.jpg");
+min-height: 1300px;
+background-attachment:fixed;
+background-position: center;
+background-repeat:no-repeat;
+background-size: auto;
+
+}
+.algeatext{
+
+}
+
+.computervisionparallax{
+background-image: url("../images/computervision1.jpg");
+min-height: 1300px;
+background-attachment:fixed;
+background-position: center;
+background-repeat:no-repeat;
+background-size: auto;
+
+}
+.computervisiontext{
+
+}
+.cosmicparallax{
+background-image: url("../images/cosmic1.jpg");
+min-height: 1300px;
+background-attachment:fixed;
+background-position: center;
+background-repeat:no-repeat;
+background-size: auto;
+
+}
+.cosmictext{
+
+}
+.eegparallax{
+background-image: url("../images/eeg1.jpg");
+min-height: 1300px;
+background-attachment:fixed;
+background-position: center;
+background-repeat:no-repeat;
+background-size: auto;
+
+}
+.eegtext{
+
+}
+.electriccarparallax{
+background-image: url("../images/electriccar1.jpg");
+min-height: 1300px;
+background-attachment:fixed;
+background-position: center;
+background-repeat:no-repeat;
+background-size: auto;
+
+}
+.electriccartext{
+
+}
+.bhparallax{
+background-image: url("../images/blockhouse1.jpg");
+min-height: 1300px;
+background-attachment:fixed;
+background-position: center;
+background-repeat:no-repeat;
+background-size: auto;
+
+}
+.bhtext{
+
+}
+.cchemparallax{
+background-image: url("../images/cchem1.jpg");
+min-height: 1300px;
+background-attachment:fixed;
+background-position: center;
+background-repeat:no-repeat;
+background-size: cover;
+
+}
+.cchemtext{
+
+}
+.alltext
+{
+height:1300px;
+background-color:transparent;
+font-size:25px;
+width:90%;
+word-wrap: break-word;
+text-align:left;
+margin-left: 15px;
+}
+.projecthead{
+background: #00254c; /* Old browsers */
+color:#fff;
+width:420px;
+height:45px;
+margin-bottom: 6px;
+padding: 10px;
+text-align:center;
+font-size:1.5em;
+font-weight: 700 !important;
+letter-spacing: 0.05em !important;
+}
+.projCenter{
+width: 1410px;
+margin: 0 auto;
+}
+.projects{
+padding:5px 5px;
+}
+.projectli{
+width:175%;	
+padding:0 5px;
+background-color:#FFE08B;
+}

@@ -1,0 +1,86 @@
+/*---- responsive-design -----*/
+@media(max-width:1440px){
+}
+@media(max-width:1366px){
+}
+@media(max-width:1280px){
+.main {
+width: 39%;
+}
+}
+@media(max-width:1080px){
+.main {
+width: 48%;
+}
+}
+@media(max-width:1024px){
+}
+@media(max-width:991px){
+h1 {
+font-size: 2.8em;
+}
+.clndr .clndr-controls {
+padding: 2em 0 !important;
+margin: 1.5em 0 1em !important;
+}
+.clndr .clndr-controls .month {
+font-size: 1.2em;
+}
+}
+@media(max-width:768px){
+.column_right_grid.calender {
+padding: 2em 2em 1em;
+}
+.main {
+width: 56%;
+}
+}
+@media(max-width:640px){
+.main {
+width: 65%;
+}
+h1 {
+font-size: 2.5em;
+}
+.clndr .clndr-controls .month {
+font-size: 1.1em !important;
+}
+.clndr .clndr-controls .clndr-control-button .clndr-previous-button {
+top: 43% !important;
+}
+.clndr .clndr-controls .clndr-control-button .clndr-next-button {
+top: 43% !important;
+}
+.copy-right p {
+font-size: 0.9em;
+}
+}
+@media(max-width:480px){
+.main {
+width: 83%;
+padding: 2em 0 6em;
+}
+.clndr-event a {
+font-size: 0.8em;
+padding: 0.7em 1.2em;
+}
+.clndr .clndr-controls {
+padding: 1.8em 0 !important;
+margin: 1.5em 0 0.8em !important;
+}
+}
+@media(max-width:320px){
+.main {
+width: 90%;
+}
+h1 {
+font-size: 2.2em;
+letter-spacing: 1px;
+}
+.clndr .clndr-controls .month {
+font-size: 0.9em !important;
+}
+.clndr .clndr-controls {
+padding: 1.3em 0 !important;
+margin: 1.2em 0 0.6em !important;
+}

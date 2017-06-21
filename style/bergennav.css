@@ -1,0 +1,100 @@
+/*********************************************************************************/
+/* Nav                                                                           */
+/*********************************************************************************/
+
+#nav
+{
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#200696+0,190475+50,0d0466+51,200696+100 */
+background: #200696; /* Old browsers */
+background: -moz-linear-gradient(top,  #200696 0%, #190475 50%, #0d0466 51%, #200696 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #200696 0%,#190475 50%,#0d0466 51%,#200696 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #200696 0%,#190475 50%,#0d0466 51%,#200696 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#200696', endColorstr='#200696',GradientType=0 ); /* IE6-9 */
+
+text-align: center;
+position: fixed;
+left: 0;
+top: 0;
+width: 100%;
+z-index: 10000;
+cursor: default;
+}
+
+#nav ul
+{
+margin-bottom: 0;
+}
+
+#nav li
+{
+display: inline-block;
+}
+li{
+list-style-type: none;
+}
+#nav a
+{
+position: relative;
+display: block;
+color: #fff;
+text-decoration: none;
+outline: 0;
+}
+
+#nav a:hover
+{
+color: #fff !important;
+}
+
+#nav a.active:before
+{
+content: '';
+display: block;
+position: absolute;
+bottom: -0.6em;
+left: 50%;
+margin-left: -0.75em;
+border-left: solid 0.75em transparent;
+border-right: solid 0.75em transparent;
+border-top: solid 0.6em #282828;
+}
+
+.dropdown-menu {
+margin-right:-100px;
+}
+.dropcal{
+width:400%;
+}
+.dropreg{
+width:500%;
+}
+.dropdown-menu > li {
+display: inline-block;
+}
+
+.dropdown-menu {
+
+text-align: center;
+}
+.dropdown:hover{
+background-color:black;
+}
+.centernav
+{
+margin:0 auto;
+}
+.navwrap{
+max-width:1170px;
+}
+.lihead
+{
+background-color:#ff9900;
+color:#000;
+margin-left:0;
+font-size: 1.125em;
+
+}
+.navbar-default .navbar-nav > li > a {
+    color: #000;
+}
