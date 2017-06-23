@@ -164,7 +164,13 @@ app.controller('RanImgController', function($scope){
 });
 
 
-
+app.controller('FacutlyController', function($scope) {
+	$scope.getFaculty = function(index){
+		console.log(facultyMember[index].facultyName);
+	
+}
+	$scope.facultyMembers = facultyMember;
+});
 
 
 	var projects = [
@@ -923,4 +929,125 @@ app.controller('RanImgController', function($scope){
 		projectBlog: 'http://vegeta-stem.blogspot.com/'
 	}
 	];
+
+	
+	var facultyMember = [
+	{
+		facultyName: 'Dr. Joseph Michael Sivo',
+		facultyEmail: 'jsivo@bergen.edu',
+		facultyOffice: 'S-325',
+		facultyField: 'Professor of Physics',
+		projectInterst:[{
+			projectName1: 'Engineering',
+			projectName2: 'Energy-related projects',
+			projectName3: 'Astronomy',
+			projectName4: 'Physics',
+		}],
+		continuingProjects:[{
+			currentProject1: 'Thermal Energy Project(Heat transfer study of Blockhouse)',
+			currentProject1: 'Meteor Detection Project (Building antenna to detect meteors and UFOs!)',
+			currentProject1: 'VEGETA (Wind turbine testing platform)',
+			currentProject1: 'Scaredrone (Computer vision based precision agriculture UAV drone design)',
+			currentProject1: 'Mini-Hybrid Rocket Engine and Test Stand Development',
+			currentProject1: 'Pedal Power Electricity Demonstator'
+		}],
+		facultyImage: 'images/faculty/sivo.jpg'
+		
+	},
+		{
+		facultyName: 'Luis De Abreu',
+		facultyEmail: 'Ldeabreu@bergen.edu',
+		facultyOffice: 'L-131',
+		facultyField: 'STEMatics Grant Program Director',
+		projectInterst:[
+			'Engineering',
+			'Unmanned Aerial Vehicles',
+			'Energy-related projects'
+		],
+		continuingProjects:[
+		'UAV - Unmanned Aerial Vehicle',
+		'Thermal Energy Project (Project with Turning Point Students)',
+		'Scaredrone (Computer Vision Based Precision Argicultural UAV Drone Design)'
+		],
+		facultyImage: 'images/faculty/abreu.jpg'
+		
+	},
+	{
+		facultyName: 'Ruth Feigenbaum, Ph.D',
+		facultyEmail: 'rfeigenbaum@bergen.edu',
+		facultyOffice: 'B-111A',
+		facultyField: 'Professor of Mathematics',
+		projectInterst:[
+			'Math support for projects',
+			'Statistical analysis for data'
+		],
+		continuingProjects:[
+		''
+		],
+		facultyImage: 'images/faculty/feigenbaum.jpg'
+		
+	},	
+	{
+		facultyName: 'Dr. Pante A. Bahrami',
+		facultyEmail: 'bahrami.pantea@gmail.com',
+		facultyOffice: 'Learning Center German: at BCC',
+		facultyField: 'Professor of Math and German Language',
+		projectInterst:[
+			'Why many of students are not interested in Math, How we can find the ways to make it attractive and fun.',
+			'Since my background is in art and math, I can compare research to a sea.',
+			'If you want to swim in the sea of research, you have to consider its rules. It is challenging until you prove your hypothesis. And when you get your result, you enjoy from the aesthetic aspects of this sea.',
+			'Research will never end, like the water in sea.'
+
+		],
+		continuingProjects:[
+		''
+		],
+		facultyImage: 'images/faculty/sivo.jpg'
+		
+	},	
+	{
+		facultyName: 'test1',
+		facultyEmail: 'test',
+		facultyOffice: 'test',
+		facultyField: 'test',
+		projectInterst:[
+			'test'
+		],
+		continuingProjects:[
+		'test'
+		],
+		facultyImage: 'images/faculty/sivo.jpg'
+		
+	},	
+	{
+		facultyName: 'test1',
+		facultyEmail: 'test',
+		facultyOffice: 'test',
+		facultyField: 'test',
+		projectInterst:[
+			'test'
+		],
+		continuingProjects:[
+		'test'
+		],
+		facultyImage: 'images/faculty/sivo.jpg'
+		
+	},
+	{
+		facultyName: 'test1',
+		facultyEmail: 'test',
+		facultyOffice: 'test',
+		facultyField: 'test',
+		projectInterst:[
+			'test'
+		],
+		continuingProjects:[
+		'test'
+		],
+		facultyImage: 'images/faculty/sivo.jpg'
+		
+	}
+	];
+	
+	
 })();

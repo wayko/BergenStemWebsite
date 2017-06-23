@@ -168,7 +168,7 @@ margin-left: 15px;
 padding-right:3px;
 }
 .logo1{
-background-color:/*#6600cc rgba(0, 0, 0, 0.85) none repeat scroll 0 0*/#262626;
+background-color:#fff;
 height:100px;
 }
 
@@ -180,15 +180,7 @@ position:absolute;
 top:15px;
 left: 35px;
 }
-.logo2{
-background-color:#ff9900;
-height:100px;
-}
-.logo2 img{
-position:absolute;
-top:15px;
-left: 35px;
-}
+
 .colorpick
 {
 background:#eeb211;
@@ -264,9 +256,7 @@ border: medium none;
 list-style: outside none none;
 text-align: left;
 }
-#gt-default-visitor-links {
-width: 300px;
-}
+
 .leftwidth
 {
 float:left;
@@ -280,20 +270,11 @@ height: 0;
 visibility: hidden;
 }
 
-.row2{
-max-width: 1170px;
-margin: 0 auto;
-}
+
 #street-address-info {
 float: right;
 padding: 0 15px;
 width: 33.33%;
-}
-
-#map {
-float:left;
-height: 280px;
-width: 50%;
 }
 
 
