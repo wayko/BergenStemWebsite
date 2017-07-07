@@ -98,3 +98,8 @@ font-size: 1.125em;
 .navbar-default .navbar-nav > li > a {
     color: #000;
 }
+
+ul.facultyUl
+{
+	min-width:700px;
+}

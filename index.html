@@ -57,9 +57,9 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Faculty</a>
 
-<ul class="dropdown-menu" >
+<ul class="dropdown-menu facultyUl">
 
-<li ng-repeat="faculty in facultyMembers"><div><img src='{{faculty.facultyImage}}' style="width:90px;height:90px;"/><br /><a href="#" ng-click="getFaculty($index)">{{faculty.facultyName}}</a></div></li>
+<li ng-repeat="faculty in facultyMembers" class="facultyNav"><a href="#" ng-click="getFaculty($index)"><img src='{{faculty.facultyImage}}' style="width:90px;height:90px;" /><br />{{faculty.facultyName}}</a></li>
 
 </ul>
 </li>
@@ -227,34 +227,50 @@ mainClass: 'my-mfp-zoom-in'
 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Register <i class="fa fa-chevron-right" aria-hidden="true"></i>
 </a>
 <ul class="dropdown-menu dropreg">
-<form action="">
-<div>
-<div class="row">
-	<div class="col-md-12">
-		<input type="text" name="name" id="name"  placeholder="name"/>
-	</div>
-	<div class="col-md-12">
-		<input type="text" name="email" id="email"  placeholder="email"/>
-	</div>
+<div id="form" class="contact-us-form">
+    <div class="title">
+        <strong>Have any questions?</strong>
+    </div>
+    <div class="subtitle">
+        <strong>Drop us a line</strong>
+    </div>
+    <form id="callus" target="_self" onsubmit="" action="javascript: postContactToGoogle()">
+        <fieldset>
+            <label for="email">Email adress *</label>
+            <input id="email" type="text" name="email">
+        </fieldset>
+		<fieldset>
+            <label for="name">Full Name *</label>
+            <input id="name" type="text" name="name">
+        </fieldset>
+		<fieldset>
+            <label for="name">Student ID *</label>
+            <input id="name" type="text" name="studentId">
+        </fieldset>
+        <fieldset>
+            <label for="name">Major at BCC *</label><br/>
+           
+		   <input type="radio" name="major" value="General Courses">  General Courses<br/>
+		   <input type="radio" name="major" value="Engineering">  Engineering<br/>
+		   <input type="radio" name="major" value="Biology">  Biology<br/>
+		   <input type="radio"n name="major" value="Chemistry">  Chemistry<br/>
+		   <input type="radio" name="major" value="Physics">  Physics<br/>
+		   <input type="radio" name="major" value="Computer Science">  Computer Science<br/>
+		   <input type="radio" name="major" value="Other">  Other<input type="text" name="otherMajor">
+		  
+		   
+        </fieldset>
+        <div style="text-align: right; padding-bottom: 15px;">* Required</div>
+        <div style="width: 100%; display: block; float: right;">
+            <button id="send" type="submit">
+                Contact Us
+            </button>
+        </div>
+        <div style="width: 100%; display: block; float: right; padding-top: 15px;">
+            <div class="requestSubmited" style="display:none; text-align: center;">Your request has been sent!</div>
+        </div>
+    </form>
 </div>
-<div class="row">
-	<div class="col-md-12">
-		<input type="text" name="subject" id="subject" placeholder="subject"/>
-	</div>
-</div>
-<div class="row">
-	<div class="col-md-12">
-		<textarea name="message" id="message" placeholder="message"></textarea>
-	</div>
-</div>
-<div class="row">
-	<div class="col-md-12">
-		<button class="btn btn-info" id="sendrequest">Send Message</button>
-		<button class="btn button-alt">Clear Form</button>
-	</div>
-</div>
-</div>
-</form>
 </ul>
 </li>
 </ul>

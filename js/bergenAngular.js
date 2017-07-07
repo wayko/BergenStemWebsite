@@ -1000,49 +1000,320 @@ app.controller('FacutlyController', function($scope) {
 		continuingProjects:[
 		''
 		],
-		facultyImage: 'images/faculty/sivo.jpg'
+		facultyImage: 'images/faculty/pantea.jpg'
 		
 	},	
 	{
-		facultyName: 'test1',
-		facultyEmail: 'test',
-		facultyOffice: 'test',
-		facultyField: 'test',
+		facultyName: 'Dr. Maria Agapito',
+		facultyEmail: 'magapito@bergen.edu',
+		facultyOffice: 'TBA',
+		facultyField: 'Adjunct Professor of Biology',
 		projectInterst:[
-			'test'
+			'Biology',
+			'Developmental effects of environmental factors(Alcohol or Bisopheno Analogues, adn Metabolism)'
 		],
 		continuingProjects:[
-		'test'
+		'Effect of Soy, Maca, Quinoa Extracts on Lipid Deposition'
 		],
-		facultyImage: 'images/faculty/sivo.jpg'
+		facultyImage: 'images/faculty/maria.jpg'
 		
 	},	
 	{
-		facultyName: 'test1',
-		facultyEmail: 'test',
-		facultyOffice: 'test',
-		facultyField: 'test',
+		facultyName: 'Linda V. Araya, MS',
+		facultyEmail: 'Laraya@bergen.edu',
+		facultyOffice: 'L-131',
+		facultyField: 'Adjunct Professor, Biology',
 		projectInterst:[
-			'test'
+			'Ecology',
+			'Evelutionary Biology',
+			'Sustainablilty',
+			'Animal Sciences'
 		],
 		continuingProjects:[
-		'test'
+		'Veffie Watt(Reusing cooking oil to generate usable energy)'
 		],
-		facultyImage: 'images/faculty/sivo.jpg'
+		facultyImage: 'images/faculty/linda.jpg'
 		
 	},
 	{
-		facultyName: 'test1',
-		facultyEmail: 'test',
-		facultyOffice: 'test',
-		facultyField: 'test',
+		facultyName: 'Dr. Bruce W. Benjamin',
+		facultyEmail: 'bbenjamin@bergen.edu',
+		facultyOffice: 'S-315',
+		facultyField: 'Adjunct Professor of Chemistry',
 		projectInterst:[
-			'test'
+			'Robotics',
+			'Process Engineering',
+			'Numberical Methods',
+			'Simulation and Process Control',
+			'Chemistry'
 		],
 		continuingProjects:[
-		'test'
+		'VEX Robotics',
+		'Hydroponics'
 		],
-		facultyImage: 'images/faculty/sivo.jpg'
+		facultyImage: 'images/faculty/benjamin.jpg'
+		
+	},
+	{
+		facultyName: 'Alan Eliscu',
+		facultyEmail: 'aeliscu@bergen.edu',
+		facultyOffice: 'TBA',
+		facultyField: 'Professor of Computer Science',
+		projectInterst:[
+			'Enterprise Computing'
+		],
+		continuingProjects:[
+		''
+		],
+		facultyImage: 'images/faculty/eliscu.jpg'
+		
+	},
+	{
+		facultyName: 'Dr. Estelle Kunoff Epstein',
+		facultyEmail: 'eepstein@bergen.edu',
+		facultyOffice: 'S-332',
+		facultyField: 'Adjunct Professor of Physics',
+		projectInterst:[
+			'Solar Energy'
+		],
+		continuingProjects:[
+		''
+		],
+		facultyImage: 'images/faculty/epstein.jpg'
+		
+	},
+	{
+		facultyName: 'Mr. Brian M. Fuschetto',
+		facultyEmail: 'bfuschetto@bergen.edu',
+		facultyOffice: 'TBA',
+		facultyField: 'Adjunct Professor of Information Technology',
+		projectInterst:[
+			'Computer Science',
+			'Application Development',
+			'Programming',
+			'Computer Based Solutions to Problems'
+		],
+		continuingProjects:[
+		'Gender Equality in Computer Science',
+		'Improving the image of Computer Science to college students as a potential major'
+		],
+		facultyImage: 'images/faculty/fuschetto.jpg'
+		
+	},
+	{
+		facultyName: 'Paul J. Griffo',
+		facultyEmail: 'pgriffo@bergen.edu',
+		facultyOffice: 'C-114',
+		facultyField: 'Professor of Physics',
+		projectInterst:[
+			'Aerospace - High Altitude Weather Balloon Project',
+			'High Powered Rocketry'
+		],
+		continuingProjects:[
+		'High Altitude Balloon - experiments design and integration; photography; data collection, reduction, analysis',
+		'High Powered Rockets - computer modeling and design; build and launch; flyable experiments; parachute recovery systems'
+		],
+		facultyImage: 'images/faculty/griffo.jpg'
+		
+	},
+	{
+		facultyName: 'Dr. Mohamed Ibrahim',
+		facultyEmail: 'mmohamed106971@bergen.edu',
+		facultyOffice: 'C-107',
+		facultyField: 'Professor of Biology',
+		projectInterst:[
+			'Molecular Microbiology',
+			'Biofule projects',
+			'Bioactive apoptosis and Oxidative stresses'
+		],
+		continuingProjects:[
+		'Antibacterial ecofriendly nanoparticles',
+		'Isolation of anticancer bioactive compounds from medicinal plants',
+		'Omics tools and their response under abiotic stresses.'
+		],
+		facultyImage: 'images/faculty/mmohamed.png'
+		
+	},
+	{
+		facultyName: 'Dr. Luis Jimenez',
+		facultyEmail: 'ljimenez@bergen.edu',
+		facultyOffice: 'S-230',
+		facultyField: 'Associate Professor of Biology',
+		projectInterst:[
+			'Environmental Biotechnology',
+			'Microbial Genetics',
+			'Microbial Ecology',
+			'Antimicrobial Research'
+		],
+		continuingProjects:[
+		'Genetic analysis of pathogenic genes',
+		'Cloning and characterization of microbial genes from soils',
+		'PCR analysis of microbial genes',
+		'Microbial fuel cells',
+		'Development of new molecular assays, RT-PCR, QPCR, to detect microorganisms in environmental samples',
+		'Antimicrobial activity of natural oils'
+		],
+		facultyImage: 'images/faculty/jimenez.jpg'
+		
+	},
+	{
+		facultyName: 'Dr. Ara N. Kahyaoglu',
+		facultyEmail: 'akahyaoglu@bergen.edu',
+		facultyOffice: 'C-114',
+		facultyField: 'Associate Professor of Chemistry',
+		projectInterst:[
+			'Poison Ivy Cream',
+			'Organic Solar Cells',
+			'Biochemical Fuel Cells'
+		],
+		continuingProjects:[
+		'Binding of Catechol to the Skin Keratin(Computer Modeling) / Developing a cream which can change color upon reaction with poison ivy',
+		'Oxidation of Glycerol with Immobilized Yeast, Oxidation Mechanism',
+		'ITO based Organic Fuel Cells Improved by Gold Nanoparticles'
+		],
+		facultyImage: 'images/faculty/arak.png'
+		
+	},
+	{
+		facultyName: 'Blii Klappert',
+		facultyEmail: 'wklappert@bergen.edu',
+		facultyOffice: 'TEC-105',
+		facultyField: 'Airline Transport Pilot/CFII, G-550, G-450,G-V, DA-2000, CL-601, NA- 265 Aviation',
+		projectInterst:[
+			'Aviation', 
+			'Air Traffic Control',
+			'Internships with large government and corporate entities.'
+
+		],
+		continuingProjects:[
+		'Internships',
+		'Flight Safety International',
+		'Newark Liberty Tower',
+		'The Port Authority of NY & NJ',
+		'Career paths with United Airlines, Republic   Airlines, Signature Flight Support.',
+
+		],
+		facultyImage: 'images/faculty/klappert.png'
+		
+	},
+	{
+		facultyName: 'William Madden',
+		facultyEmail: 'bmadden@bergen.edu',
+		facultyOffice: 'C-117',
+		facultyField: 'Associate Professor of Information Technology',
+		projectInterst:[
+			'Media Computing',
+			'3D Printing',
+			'Astronomy',
+			'Optics'
+		],
+		continuingProjects:[
+		'Build 3D Printers',
+		'Audio Production'
+		],
+		facultyImage: 'images/faculty/madden.jpg'
+		
+	},
+	{
+		facultyName: 'Dr. Fred Marton',
+		facultyEmail: 'fmarton@bergen.edu',
+		facultyOffice: 'S-325',
+		facultyField: 'Associate Professor of Geology and Physics',
+		projectInterst:[
+			'Earth Science',
+			'Planetary Science',
+			'Physics'
+		],
+		continuingProjects:[
+		'Calibrate TC-1 and AS-1 seismometers',
+		'Solar-powered shed'
+
+		],
+		facultyImage: 'images/faculty/marton.jpg'
+		
+	},
+	{
+		facultyName: 'Neil Pandya',
+		facultyEmail: 'neil.pandya.np@gmail.com',
+		facultyOffice: 'TBA',
+		facultyField: 'Adjunct Professor of Physics at Bergen Community College Ph D Candidate and Research Assistant at Stevens Institute of Technology',
+		projectInterst:[
+			'Mathematical and Theoretical Physics',
+			'Quantum Mechanics',
+			'Special Relativity',
+			'Pure Mathematics'
+		],
+		continuingProjects:[
+		'Special Relativity Diagrams (additions to Minkowski diagram)',
+		'Coherent Anti-stokes Raman Spectroscopy (CARS) project',
+		'Gambler’s fallacy research'
+		],
+		facultyImage: 'images/faculty/pandya.jpg'
+		
+	},
+	{
+		facultyName: 'Dr. Farah Rezae',
+		facultyEmail: 'frezae@bergen.edu',
+		facultyOffice: 'TBA',
+		facultyField: 'Professor of Chemistry',
+		projectInterst:[
+			'Computers and Their Applications to Chemistry'
+		],
+		continuingProjects:[
+		'Fold protein puzzles and contribute to critical scientific research.'
+		],
+		facultyImage: 'images/faculty/rezae.jpg'
+		
+	},
+	{
+		facultyName: 'Dr. Charles Sontag',
+		facultyEmail: 'csontag@bergen.edu',
+		facultyOffice: 'S-235',
+		facultyField: 'Professor of Biology',
+		projectInterst:[
+			'Ecology',
+			'Environmental Science',
+			'Ethology',
+			'Ferroequineology'
+		],
+		continuingProjects:[
+		'River Chemistry on the Hackensack River'
+		],
+		facultyImage: 'images/faculty/sontag.png'
+		
+	},
+	{
+		facultyName: 'John M. Sanchez',
+		facultyEmail: 'josanchez@bergen.edu',
+		facultyOffice: 'TBA',
+		facultyField: 'Professor of Physics',
+		projectInterst:[
+			'Engineering',
+			'Energy-related projects',
+			'Astronomy',
+			'Nuclear Physics',
+			'Pedagogical Enhancement through Digital Multimedia'
+		],
+		continuingProjects:[
+		'Transformation of old paper based Astronomy Labs into Multimedia Intensive computer-enhanced learning and testing modules.'
+		],
+		facultyImage: 'images/faculty/sanchez.jpg'
+		
+	},
+	{
+		facultyName: 'Dr. Coleen Coyle DiLauro',
+		facultyEmail: 'cdilauro@bergen.edu',
+		facultyOffice: 'S-238',
+		facultyField: 'Assistant Professor of Anatomy & Physiology',
+		projectInterst:[
+			'Brain Wave Analysis',
+			'Studies on Anxiety & Learning Styles',
+			'Brain Function & Neurology'
+		],
+		continuingProjects:[
+		'EEG: Neural Resonant Induction with a focus on Anxiety and Activated Brain Waves'
+		],
+		facultyImage: 'images/faculty/dilauro.jpg'
 		
 	}
 	];
