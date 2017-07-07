@@ -12,16 +12,16 @@ $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
 $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
 });
 
-$('.carousel').on('slide.bs.carousel',function() {
+/* $('.carousel').on('slide.bs.carousel',function() {
 currentIndex = $('div.active').index() + 1;
-console.log(currentIndex);
-if(currentIndex == 4)
+ console.log(currentIndex);
+if(currentIndex == 1)
 {
 
 player.playVideo();
 
-}
-});
+} 
+}); */
 
 
 
@@ -39,13 +39,17 @@ player = new YT.Player('youtube', {
 height: '600',
 width: '1659',
 videoId: 'n1hHr62viSU',
+playerVars:{
+	'autoplay':1,
+	'controls':0
+}/* ,
 events: {
 'onStateChange': onPlayerStateChange
-}
+} */
 });
 }
 
-var done = false;
+/* var done = false;
 function onPlayerStateChange(event) {
 switch(event.data){
 case 1:
@@ -58,4 +62,4 @@ break;
 }
 function stopVideo() {
 player.stopVideo();
-}
+} */

@@ -38,8 +38,6 @@ app.controller('AddController', function($scope){
 	angular.forEach(projects[index].images, function(value,key)
 	{
 		imgdiv.innerHTML = imgdiv.innerHTML + '<div class="item"><img src="'+ projects[index].images[key] +'"  onerror="this.onerror=null;this.src=\'images/comingsoon2.jpg\';"/><div class="carousel-caption biggerfont">' + projects[index].projectName + '</div>'
-		
-		console.log(key + ": " + value);
 	});
 	
 }
@@ -112,7 +110,7 @@ app.controller('AddController', function($scope){
 	$scope.project7 = projects7;
 });
 
-app.controller('RanImgController', function($scope){
+/* app.controller('RanImgController', function($scope){
 	allProject = [];
 	allImages = [];
 	allProject.push(projects);
@@ -121,12 +119,12 @@ app.controller('RanImgController', function($scope){
 	allProject.push(projects4);
 	allProject.push(projects5);
 	allProject.push(projects6);
-	allProject.push(projects7);
-	var imgdiv = document.getElementById('getImgages');
-	imgdiv.innerHTML = '<div class="item active"><img src="images/loading.gif" alt="Projects"><div class="carousel-caption biggerfont">Bergen Stem</div></div>';
-	$scope.getImage = function(){
+	allProject.push(projects7); */
+	//var imgdiv = document.getElementById('getImgages');
+	 //imgdiv.innerHTML = '<div class="item active"><img src="images/loading.gif" alt="Projects">'; 
+	//$scope.getImage = function(){
 		
-		var rndNum;
+		/* var rndNum;
 		var x;
 		var y;
 		var z;
@@ -148,20 +146,20 @@ app.controller('RanImgController', function($scope){
 		
 		imgdiv.innerHTML = imgdiv.innerHTML + '<div class="item"><img src="'+ allImages[rndNum2 -1] +'"  onerror="this.onerror=null;this.src=\'images/comingsoon2.jpg\';"/><div class="carousel-caption biggerfont">'+ allImages[rndNum2 -1] + '</div>'
 		
-		imgdiv.innerHTML = imgdiv.innerHTML + '<div class="item"><img src="'+ allImages[rndNum3 -1] +'"  onerror="this.onerror=null;this.src=\'images/comingsoon2.jpg\';"/><div class="carousel-caption biggerfont">'+ allImages[rndNum3 -1] + '</div>'
+		imgdiv.innerHTML = imgdiv.innerHTML + '<div class="item"><img src="'+ allImages[rndNum3 -1] +'"  onerror="this.onerror=null;this.src=\'images/comingsoon2.jpg\';"/><div class="carousel-caption biggerfont">'+ allImages[rndNum3 -1] + '</div>' */
 		
-		imgdiv.innerHTML = imgdiv.innerHTML + '<div class="item" id="youtube"></div>'
+		//imgdiv.innerHTML = imgdiv.innerHTML + '<div class="item" id="youtube"></div>'
 		
 		
-	}
-	$scope.project = projects;
+	//}
+	/* $scope.project = projects;
 	$scope.project2 = projects2;
 	$scope.project3 = projects3;
 	$scope.project4 = projects4;
 	$scope.project5 = projects5;
 	$scope.project6 = projects6;
 	$scope.project7 = projects7;
-});
+}); */
 
 
 app.controller('FacutlyController', function($scope) {

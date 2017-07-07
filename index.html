@@ -23,14 +23,15 @@
 
 <div class="wrapper">
 <header class="whitebar">
-<div class="clearfix pull-right">
-<a href="https://www.facebook.com/bergen.stem"><i class="fa fa-facebook fa-2x iconwhite" aria-hidden="true"></i></a>
-<a href="https://twitter.com/bergencc?lang=en"><i class="fa fa-twitter fa-2x iconwhite" aria-hidden="true"></i></a>
-</div>
+
 </header>
 <header class="logo1">
 <div class="row trans">
 <div class="col-xs-12 col-md-12"><a href="#"><img src="images/stemlogo.png" class="footimg"/></a></div>
+<div class="clearfix pull-right">
+<a href="https://www.facebook.com/bergen.stem"><i class="fa fa-facebook fa-2x iconwhite" aria-hidden="true"></i></a>
+<a href="https://twitter.com/bergencc?lang=en"><i class="fa fa-twitter fa-2x iconwhite" aria-hidden="true"></i></a>
+</div>
 </div>
 </header>
 <nav class="navbar navbar-default colorpick fullwidth">
@@ -278,13 +279,13 @@ mainClass: 'my-mfp-zoom-in'
 </div>
 </div>
 </nav>
-<section class="imgsec" ng-controller="RanImgController">
+<section class="imgsec">
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
 
   <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox" id="getImgages" ng-init="getImage()">
-  
+  <div class="carousel-inner" role="listbox" id="getImgages" >
+  <div class="item active" id="youtube"></div>
   </div>
 
   <!-- Controls -->
@@ -301,14 +302,11 @@ mainClass: 'my-mfp-zoom-in'
 <section class="projCenter">
 <ng-view class="wrapng"></ng-view>
 </section>
-<footer>
-All content is © BCC STEM Student Union 2017
-</footer>
 <footer class="footer2">
 <div class="row row2">
 <div class="row2">
 <div id="map" class="col-xs-6"></div>
-<div class="superfooter-resource-links" id="gt-default-visitor-links" role="navigation" aria-labelledby="gt-default-visitor-links-title">
+<div class="superfooter-resource-links white" id="gt-default-visitor-links" role="navigation" aria-labelledby="gt-default-visitor-links-title">
       <h4 class="title" id="gt-default-visitor-links-title">STEM Location</h4>
       <ul class="menu" id="gt-visitor-resources">
       <li class="gt-default-mini-right">
