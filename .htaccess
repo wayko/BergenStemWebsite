@@ -5,3 +5,4 @@ RewriteEngine on
     RewriteRule ^.*$ - [NC,L]
 
     RewriteRule ^(.*) /bergenstem/index.html [NC,L]
+	Header set Access-Control-Allow-Origin "*"

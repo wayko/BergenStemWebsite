@@ -241,28 +241,50 @@ mainClass: 'my-mfp-zoom-in'
 </div>
 </div>
 </nav>
-<section class="imgsec">
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox" id="getImgages" >
-  <div class="item active" id="youtube"></div>
-  </div>
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-</section>
 <section class="projCenter">
-<ng-view class="wrapng"></ng-view>
+<div id="form" class="contact-us-form">
+    <div class="title">
+        <strong>STEM registration form</strong>
+    </div>
+    <div class="subtitle">
+        <p>Thank you for your interest in joining STEM! please fill this registration form to start receiving emails with updates and announcements from today on!</p>
+    </div>
+    <form id="form" target="_self" onsubmit="" action="">
+        <fieldset>
+            <label for="email">Email adress *</label>
+            <input id="email" type="text" name="email">
+        </fieldset>
+		<fieldset>
+            <label for="name">Full Name *</label>
+            <input id="name" type="text" name="name">
+        </fieldset>
+		<fieldset>
+            <label for="sid">Student ID *</label>
+            <input id="sid" type="text" name="sid">
+        </fieldset>
+        <fieldset>
+            <label for="major">Major at BCC *</label><br/>
+          
+		   <input type="radio" id="major" name="major" value="General Courses">  General Courses<br />
+		   <input type="radio" id="major" name="major" value="Engineering">  Engineering<br />
+		   <input type="radio" id="major" name="major" value="Biology">  Biology<br />
+		   <input type="radio" id="major" name="major" value="Chemistry">  Chemistry<br />
+		   <input type="radio" id="major" name="major" value="Physics">  Physics<br />
+		   <input type="radio" id="major" name="major" value="Computer Science">  Computer Science<br />
+		   <input type="radio" id="major" name="major" value="Other">  Other<input type="text" name="otherMajor" id="otherMajor">
+        </fieldset>
+        <div style="text-align: right; padding-bottom: 15px;">* Required</div>
+        <div style="width: 100%; display: block; float: right;">
+            <button id="send" type="submit">
+                Contact Us
+            </button>
+        </div>
+        <div style="width: 100%; display: block; float: right; padding-top: 15px;">
+            <div class="requestSubmited" style="display:none; text-align: center;">Your request has been sent!</div>
+        </div>
+    </form>
+</div>
 </section>
 <footer class="footer2">
 <div class="row row2">

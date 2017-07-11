@@ -163,8 +163,12 @@ app.controller('AddController', function($scope){
 
 
 app.controller('FacutlyController', function($scope) {
-	$scope.getFaculty = function(index){
-		console.log(facultyMember[index].facultyName);
+	$scope.getFacultyProjects = function(index){
+		var div = document.getElementById('interest');
+	angular.forEach(facultyMember[index], function(value,key)
+	{
+		div.innerHTML = facultyMember[index].projectInterst;
+	});
 	
 }
 	$scope.facultyMembers = facultyMember;
@@ -935,20 +939,20 @@ app.controller('FacutlyController', function($scope) {
 		facultyEmail: 'jsivo@bergen.edu',
 		facultyOffice: 'S-325',
 		facultyField: 'Professor of Physics',
-		projectInterst:[{
-			projectName1: 'Engineering',
-			projectName2: 'Energy-related projects',
-			projectName3: 'Astronomy',
-			projectName4: 'Physics',
-		}],
-		continuingProjects:[{
-			currentProject1: 'Thermal Energy Project(Heat transfer study of Blockhouse)',
-			currentProject1: 'Meteor Detection Project (Building antenna to detect meteors and UFOs!)',
-			currentProject1: 'VEGETA (Wind turbine testing platform)',
-			currentProject1: 'Scaredrone (Computer vision based precision agriculture UAV drone design)',
-			currentProject1: 'Mini-Hybrid Rocket Engine and Test Stand Development',
-			currentProject1: 'Pedal Power Electricity Demonstator'
-		}],
+		projectInterst:[
+			 'Engineering',
+			 'Energy-related projects',
+			 'Astronomy',
+			 'Physics',
+		],
+		continuingProjects:[
+			 'Thermal Energy Project(Heat transfer study of Blockhouse)',
+			 'Meteor Detection Project (Building antenna to detect meteors and UFOs!)',
+			 'VEGETA (Wind turbine testing platform)',
+			 'Scaredrone (Computer vision based precision agriculture UAV drone design)',
+			 'Mini-Hybrid Rocket Engine and Test Stand Development',
+			 'Pedal Power Electricity Demonstator'
+		],
 		facultyImage: 'images/faculty/sivo.jpg'
 		
 	},

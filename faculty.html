@@ -22,9 +22,6 @@
 <body>
 
 <div class="wrapper">
-<header class="whitebar">
-
-</header>
 <header class="logo1">
 <div class="row trans">
 <div class="col-xs-12 col-md-12"><a href="#"><img src="images/stemlogo.png" class="footimg"/></a></div>
@@ -53,15 +50,9 @@
 </ul>
 </li>
 </ul>
-<ul class="nav navbar-nav" ng-controller="FacutlyController">
+<ul class="nav navbar-nav">
 <li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Faculty</a>
-
-<ul class="dropdown-menu facultyUl">
-
-<li ng-repeat="faculty in facultyMembers" class="facultyNav"><a href="#" ng-click="getFaculty($index)"><img src='{{faculty.facultyImage}}' style="width:90px;height:90px;" /><br />{{faculty.facultyName}}</a></li>
-
-</ul>
+<a href="faculty.html">Faculty</a>
 </li>
 </ul>
 <ul class="nav navbar-nav">
@@ -241,28 +232,22 @@ mainClass: 'my-mfp-zoom-in'
 </div>
 </div>
 </nav>
-<section class="imgsec">
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+<section ng-controller="FacutlyController">
+<div class="containall row margleft15">
+<ul ng-repeat="faculty in facultyMembers">
+<li><img src='{{faculty.facultyImage}}' style="width:180px;height:180px;" />
+<ul ng-init="getFacultyProjects($index)">
+<li>{{faculty.facultyName}}</li>
+<li>{{faculty.facultyField}}</li>
+<li>Office: {{faculty.facultyOffice}}</li>
+<li>Email: {{faculty.facultyEmail}}</li>
 
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox" id="getImgages" >
-  <div class="item active" id="youtube"></div>
-  </div>
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+<li>Project topics of interest: <span id="interest"></span></li>
+<li>Continuing Projects:<span id="continuing"></span></li>
+</ul>
+</li>
+</ul>
 </div>
-</section>
-<section class="projCenter">
-<ng-view class="wrapng"></ng-view>
 </section>
 <footer class="footer2">
 <div class="row row2">
