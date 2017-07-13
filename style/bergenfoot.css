@@ -16,16 +16,16 @@ hight:70px;
 width:111px;
 hight: 84px;
 }
-
+.tops{
+	position:relative;
+	top: 15px;
+}
 .superfooter-resource-links {
 float: left;
 padding: 0 10px 10px;
 position: relative;
 }
-.footer2 > .row2
-{
 
-}
 
 .logo2{
 background-color:#ffe;

@@ -165,11 +165,15 @@ app.controller('AddController', function($scope){
 app.controller('FacutlyController', function($scope) {
 	$scope.getFacultyProjects = function(index){
 		var div = document.getElementById('interest');
-	angular.forEach(facultyMember[index], function(value,key)
-	{
-		div.innerHTML = facultyMember[index].projectInterst;
-	});
-	
+		var projectList = [];
+		var x;
+		for(x = 0; x < facultyMember[index].projectInterst.length; x++)
+		{
+			projectList.push(facultyMember[index].projectInterst[x]);
+			
+		}
+			div.innerHTML = projectList;
+;	
 }
 	$scope.facultyMembers = facultyMember;
 });
@@ -984,7 +988,7 @@ app.controller('FacutlyController', function($scope) {
 			'Statistical analysis for data'
 		],
 		continuingProjects:[
-		''
+		'TBA'
 		],
 		facultyImage: 'images/faculty/feigenbaum.jpg'
 		
@@ -1002,7 +1006,7 @@ app.controller('FacutlyController', function($scope) {
 
 		],
 		continuingProjects:[
-		''
+		'TBA'
 		],
 		facultyImage: 'images/faculty/pantea.jpg'
 		
@@ -1067,7 +1071,7 @@ app.controller('FacutlyController', function($scope) {
 			'Enterprise Computing'
 		],
 		continuingProjects:[
-		''
+		'TBA'
 		],
 		facultyImage: 'images/faculty/eliscu.jpg'
 		

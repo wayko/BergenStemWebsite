@@ -278,5 +278,27 @@ width: 33.33%;
 }
 
 
+.boxed{
+	
+	margin-right: 25px;
+	position: relative; 
+  
+  display: inline-block; 
+}
 
+.collegewrapper{
+	width:600px;
+	margin:0 auto;
+}
+.marLeft115
+{
+	
+margin-left: -115px;
+}
 
+.facImg img
+{
+	border:1px black solid;
+	border-radius:10px 10px;
+	box-shadow: 10px 10px 7px #888; 
+}

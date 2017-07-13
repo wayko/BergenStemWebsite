@@ -6,12 +6,15 @@
 <script src="http://code.jquery.com/jquery-3.2.1.min.js"
 			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 			  crossorigin="anonymous" type="text/javascript"></script>
+
 <link rel="stylesheet" type="text/css" href="style/normalize.css" />
+
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" />
 <!-- Latest compiled and minified JavaScript -->
+
 <link rel="stylesheet" type="text/css" href="style/clndr.css" />
 <link rel="stylesheet" type="text/css" href="style/font-awesome.css" />
 <link rel="stylesheet" type="text/css" href="style/bergenstem.css" />
@@ -22,13 +25,10 @@
 <body>
 
 <div class="wrapper">
-<header class="whitebar">
-
-</header>
 <header class="logo1">
 <div class="row trans">
-<div class="col-xs-12 col-md-12"><a href="#"><img src="images/stemlogo.png" class="footimg"/></a></div>
-<div class="clearfix pull-right">
+<div class="col-xs-9"><a href="#"><img src="images/stemlogo.png" class="footimg"/></a></div>
+<div class="clearfix col-xs-2 pull-right tops">
 <a href="https://www.facebook.com/bergen.stem"><i class="fa fa-facebook fa-2x iconwhite" aria-hidden="true"></i></a>
 <a href="https://twitter.com/bergencc?lang=en"><i class="fa fa-twitter fa-2x iconwhite" aria-hidden="true"></i></a>
 </div>
@@ -258,6 +258,7 @@ mainClass: 'my-mfp-zoom-in'
 <section class="projCenter">
 <ng-view class="wrapng"></ng-view>
 </section>
+<section class="footersec">
 <footer class="footer2">
 <div class="row row2">
 <div class="row2">
@@ -329,9 +330,9 @@ Bergen Community College</li>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUF0_bh5mgywMKD-CyipbUgpKV5ZKlCvI&callback=initMap"
     async defer>
 	</script>
-
+</section>
 </div>
-
+<section class="scripts">
 <script src="http://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js" type="text/javascript"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://code.angularjs.org/1.3.9/angular.js"></script>
@@ -339,16 +340,8 @@ Bergen Community College</li>
 <script type="text/javascript" src="https://code.angularjs.org/1.3.9/angular-sanitize.min.js"></script>
 <script src="https://apis.google.com/js/api.js" type="text/javascript"></script>
 <script src="js/bergenAngular.js" type="text/javascript"></script>
-<script src="js/mobilyblocks.js"></script>
-<script src="js/underscore-min.js"></script>
-<script src= "js/moment-2.2.1.js"></script>
-<script src="js/clndr.js"></script>
-<script src="js/site.js"></script>
-<script src="js/config.js"></script>
-<script src="js/jquery.zrssfeed.js"></script>
-<script src="js/jquery.vticker.js"></script>
-<script src="js/contact.js"></script>
 <script type="text/javascript" src="js/bergenstem.js" ></script>
+</section>
 </body>
 
 </html>
